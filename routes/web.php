@@ -1,6 +1,9 @@
 <?php
 
+use App\Models\Category;
+use App\Models\Product;
 use Illuminate\Support\Facades\Route;
+use TCG\Voyager\Facades\Voyager;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,5 +17,25 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
+});
+
+Route::get('/categories', function () {
+    $categories = Category::get();
+    return view('categories', compact('categories'));
+});
+
+Route::get('/categories/{id}', function($id) {
+    $category = Category::find($id);
+    return view('category-detail', compact('category'));
+});
+
+Route::get('/products/{id}', function($id) {
+    $product = Product::find($id);
+    return view('product-detail', compact('product'));
+});
+
+
+Route::group(['prefix' => 'admin'], function () {
+    Voyager::routes();
 });
