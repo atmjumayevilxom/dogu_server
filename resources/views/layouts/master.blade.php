@@ -4,7 +4,10 @@
         @include('layouts.meta')
         @yield('meta')
     </head>
-    <body>
+    <body class="stretched">
+        @include('layouts.header')
         @yield('content')
+        @include('layouts.footer')
     </body>
+
 </html>
