@@ -14,7 +14,6 @@ Route::get('/categories/{id}', [CategoryController::class, 'show']);
 
 Route::get('/products/{id}', [ProductController::class, 'show']);
 
-
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });
