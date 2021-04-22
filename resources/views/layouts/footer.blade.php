@@ -2,14 +2,14 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-4">
-                <img src="http://dogurussia.com/wp-content/uploads/2020/05/logo-icon.png">
+                <img src="{{asset('http://dogurussia.com/wp-content/uploads/2020/05/logo-icon.png')}}">
             </div>
             <div class="col-sm-4">
                 <p class="title">О компании</p>
                 <ul class="navbar">
-                    <li><a href="./company.html">О компании</a></li>
-                    <li><a href="./product.html">Проекты</a></li>
-                    <li><a href="./services.html">Сервис</a></li>
+                    <li><a href="{{url('company')}}">О компании</a></li>
+                    <li><a href="{{url('proect')}}">Проекты</a></li>
+                    <li><a href="{{url('servis')}}">Сервис</a></li>
                     <li><a href="#">Видео</a></li>
                     <li><a href="#">Программа подбора</a></li>
                     <li><a href="#">Новости</a></li>
@@ -113,7 +113,7 @@
 <!--call start-->
 <div class="call">
     <button class="button circle pulse orange" id="myBtn">
-        <img src="images/operator-pngrepo-com.png">
+        <img src="{{asset('images/operator-pngrepo-com.png')}}">
     </button>
 
     <!-- The Modal -->
@@ -193,10 +193,10 @@
 
 <!-- JavaScripts
 ============================================= -->
-<script src="js/home-page.js"></script>
-<script src="js/jquery.js"></script>
-<script src="js/plugins.min.js"></script>
-<script src="./js/home-page.js"></script>
-<script src="./js/scroll.js"></script>
+<script src="{{asset('js/home-page.js')}}"></script>
+<script src="{{asset('js/jquery.js')}}"></script>
+<script src="{{asset('js/plugins.min.js')}}"></script>
+<script src="{{asset('./js/home-page.js')}}"></script>
+<script src="{{asset('./js/scroll.js')}}"></script>
 <!-- Footer Scripts
 ============================================= -->

@@ -1,8 +1,8 @@
 @extends('layouts.master')
 
 @section('meta')
-<link rel="stylesheet" href="css/product.css">
-    {{-- <title>{{ $product->name }}</title> --}}
+<link rel="stylesheet" href="{{asset('css/product.css')}}">
+<title>Proect</title>
 @stop
 
 @section('content')
@@ -50,47 +50,47 @@
             <div class="images-card">
                 <h3>Государственное училище (техникум) олимпийского резерва по хоккею, г. Ярославль</h3>
                 <div class="img-yaroslav">
-                    <img src="images/1_1.jpg" alt="alt">
-                    <img src="images/1_2.jpg" alt="alt">
+                    <img src="{{asset('images/1_1.jpg')}}" alt="alt">
+                    <img src="{{asset('images/1_2.jpg')}}" alt="alt">
                 </div>
                 <h3>Концерн ВКО «Алмаз-Антей», корпус №16, г. Санкт-Петербург</h3>
                 <div class="img-san-peterburg">
-                    <img src="images/1_3.jpg" alt="alt">
-                    <img src="images/1_4.jpg" alt="alt">
+                    <img src="{{asset('images/1_3.jpg')}}" alt="alt">
+                    <img src="{{asset('images/1_4.jpg')}}" alt="alt">
                 </div>
                 <h3>Центральный автовокзал, Щелковское ш., г. Москва</h3>
                 <div class="img-moskva">
-                    <img src="images/1_5.jpg" alt="alt">
-                    <img src="images/1_6.jpg" alt="alt">
+                    <img src="{{asset('images/1_5.jpg')}}" alt="alt">
+                    <img src="{{asset('images/1_6.jpg')}}" alt="alt">
                 </div>
                 <div class="blog" style="margin-top: 50px">
                     <h3>Агрокластер ФУД СИТИ, Калужское шоссе, г. Москва</h3>
                     <div class="img">
-                        <img src="images/4-1024x341.jpg" alt="alt" class="height">
+                        <img src="{{asset('images/4-1024x341.jpg')}}" alt="alt" class="height">
                     </div>
                 </div>
                 <div class="blog">
                     <h3>Вешняковский рынок, г. Москва</h3>
                     <div class="img">
-                        <img src="images/1_7.jpg" alt="alt">
+                        <img src="{{asset('images/1_7.jpg')}}" alt="alt">
                     </div>
                 </div>
                 <div class="blog">
                     <h3>ФОК ЖК «Эталон», ул. Старокрымская, д. 13, г. Москва</h3>
                     <div class="img">
-                        <img src="images/1_8.jpg" alt="alt">
+                        <img src="{{asset('images/1_8.jpg')}}" alt="alt">
                     </div>
                 </div>
                 <div class="blog">
                     <h3>Штаб строительства концертного зала «Олимпийский», г. Москва</h3>
                     <div class="img">
-                        <img src="images/1_9.jpg" alt="alt">
+                        <img src="{{asset('images/1_9.jpg')}}" alt="alt">
                     </div>
                 </div>
                 <div class="blog">
                     <h3>Штаб строительства концертного зала «Олимпийский», г. Москва</h3>
                     <div class="img">
-                        <img src="images/1_10.jpg" alt="alt">
+                        <img src="{{asset('images/1_10.jpg')}}" alt="alt">
                     </div>
                 </div>
 
@@ -99,9 +99,5 @@
     </div>
 </main>
 
-    {{-- <h1>{{ $product->name }}</h1>
-    <img src="{{ Voyager::image( $product->image ) }}"
-        alt="{{ $product->name }}"
-        width="400">
-    <section>{!! $product->description !!}</section> --}}
+
 @stop

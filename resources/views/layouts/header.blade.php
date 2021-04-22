@@ -15,7 +15,7 @@
 <div class="nav__in">
     <div class="container">
         <nav>
-            <a href='index.html'><img src="./images/dogu-logo.jpg" class="site-logo" alt="JPG"></a>
+            <a href='/'><img src="{{asset('./images/dogu-logo.jpg')}}" class="site-logo" alt="JPG"></a>
             <ul class="navbar">
                 <!--data-label is for the jQuery to recent post from the blog feed -->
                 <div class="networks">
@@ -25,12 +25,14 @@
                     <a href="https://www.facebook.com/doguuzbekistan"><i class="fab fa-facebook-f icons"></i></a>
                 </div>
 
-                <li class='drop-down'><a href='./company.html'> Компания <i class="fas fa-angle-right"></i></a>
-                    <li class='drop-down'><a href='./categories.html'> ОБОРУДОВАНИЕ <i
+                <li class='drop-down'><a href="{{url('company')}}"> Компания <i class="fas fa-angle-right"></i></a>
+                    <li class='drop-down'><a href="{{ url('categories') }}"> ОБОРУДОВАНИЕ <i
                             class="fas fa-angle-right"></i></a>
                         <ul>
-                            <li class='sub-drop'><a href='./card.html'> Установки с теплоутилизацией <i
+                           
+                            <li class='sub-drop'><a href='./'> Установки с теплоутилизацией <i
                                     class="fas fa-angle-double-right"></i></a>
+
                                 <ul>
                                     <li><a href='./Projects.html'><i class="fas fa-chevron-circle-right"></i>
                                         FOUR-HOME</a></li>
@@ -48,144 +50,6 @@
                                         FOUR-HPGK</a></li>
                                 </ul>
                             </li>
-                            <li class='sub-drop'><a href='./category-detail'> Вентиляционные решетки и диффузоры <i
-                                    class="fas fa-angle-double-right"></i></a>
-                                <ul>
-                                    <li><a href='./Projects.html'><i class="fas fa-chevron-circle-right"></i> DMD</a>
-                                    </li>
-                                    <li><a href='./Projects.html'><i class="fas fa-chevron-circle-right"></i> DMT</a>
-                                    </li>
-                                    <li><a href='./Projects.html'><i class="fas fa-chevron-circle-right"></i> DML</a>
-                                    </li>
-                                    <li><a href='./Projects.html'><i class="fas fa-chevron-circle-right"></i> DMP</a>
-                                    </li>
-                                    <li><a href='./Projects.html'><i class="fas fa-chevron-circle-right"></i>
-                                        DMY-DMZ</a></li>
-                                    <li><a href='./Projects.html'><i class="fas fa-chevron-circle-right"></i> DMK</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class='sub-drop'><a href='./card.html'> Вентиляционные решетки и диффузоры <i
-                                    class="fas fa-angle-double-right"></i></a>
-                                <ul>
-                                    <li><a href='./Projects.html'><i class="fas fa-chevron-circle-right"></i> DPE</a>
-                                    </li>
-                                    <li><a href='./Projects.html'><i class="fas fa-chevron-circle-right"></i> DPC</a>
-                                    </li>
-                                    <li><a href='./Projects.html'><i class="fas fa-chevron-circle-right"></i> DPD</a>
-                                    </li>
-                                    <li><a href='./Projects.html'><i class="fas fa-chevron-circle-right"></i> DPA</a>
-                                    </li>
-                                    <li><a href='./Projects.html'><i class="fas fa-chevron-circle-right"></i> DPK</a>
-                                    </li>
-                                    <li><a href='./Projects.html'><i class="fas fa-chevron-circle-right"></i> DPS</a>
-                                    </li>
-                                    <li><a href='./Projects.html'><i class="fas fa-chevron-circle-right"></i> OAG</a>
-                                    </li>
-                                    <li><a href='./Projects.html'><i class="fas fa-chevron-circle-right"></i> DGK</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class='sub-drop'><a href='./card.html'> Устройства для очистки восдуха и шумоподавления
-                                <i class="fas fa-angle-double-right"></i></a>
-                                <ul>
-                                    <li><a href='./Projects.html'><i class="fas fa-chevron-circle-right"></i> GFP</a>
-                                    </li>
-                                    <li><a href='./Projects.html'><i class="fas fa-chevron-circle-right"></i> GFB</a>
-                                    </li>
-                                    <li><a href='./Projects.html'><i class="fas fa-chevron-circle-right"></i> GFD</a>
-                                    </li>
-                                    <li><a href='./Projects.html'><i class="fas fa-chevron-circle-right"></i> GFL</a>
-                                    </li>
-                                    <li><a href='./Projects.html'><i class="fas fa-chevron-circle-right"></i> GSS</a>
-                                    </li>
-                                    <li><a href='./Projects.html'><i class="fas fa-chevron-circle-right"></i> GSP</a>
-                                    </li>
-                                    <li><a href='./Projects.html'><i class="fas fa-chevron-circle-right"></i>
-                                        GLC/GLD</a></li>
-                                    <li><a href='./Projects.html'><i class="fas fa-chevron-circle-right"></i> GLR</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class='sub-drop'><a href='./card.html'> Рассеивающие диффузоры <i
-                                    class="fas fa-angle-double-right"></i></a>
-                                <ul>
-                                    <li><a href='./Projects.html'><i class="fas fa-chevron-circle-right"></i> UDD</a>
-                                    </li>
-                                    <li><a href='./Projects.html'><i class="fas fa-chevron-circle-right"></i> UDK</a>
-                                    </li>
-                                    <li><a href='./Projects.html'><i class="fas fa-chevron-circle-right"></i> UDY</a>
-                                    </li>
-                                    <li><a href='./Projects.html'><i class="fas fa-chevron-circle-right"></i> UDS</a>
-                                    </li>
-                                    <li><a href='./Projects.html'><i class="fas fa-chevron-circle-right"></i> UDF</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class='sub-drop'><a href='./card.html'> Кухонные вентиляционные устройства <i
-                                    class="fas fa-angle-double-right"></i></a>
-                                <ul>
-                                    <li><a href='./Projects.html'><i class="fas fa-chevron-circle-right"></i>
-                                        HYP-HYH</a></li>
-                                    <li><a href='./Projects.html'><i class="fas fa-chevron-circle-right"></i> HDS</a>
-                                    </li>
-                                    <li><a href='./Projects.html'><i class="fas fa-chevron-circle-right"></i> HYY</a>
-                                    </li>
-                                    <li><a href='./Projects.html'><i class="fas fa-chevron-circle-right"></i>
-                                        HWW-HWP</a></li>
-                                    <li><a href='./Projects.html'><i class="fas fa-chevron-circle-right"></i> HTH</a>
-                                    </li>
-                                    <li><a href='./Projects.html'><i class="fas fa-chevron-circle-right"></i> HTY</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class='sub-drop'><a href='./card.html'> Кухонные вентиляционные устройства <i
-                                    class="fas fa-angle-double-right"></i></a>
-                                <ul>
-                                    <li><a href='./Projects.html'><i class="fas fa-chevron-circle-right"></i>
-                                        FOUR-KITCHEN</a></li>
-                                    <li><a href='./Projects.html'><i class="fas fa-chevron-circle-right"></i>
-                                        FOUR-SMOKE</a></li>
-                                </ul>
-                            </li>
-                            <li class='sub-drop'><a href='./card.html'> Устройства регулирования подачи воздуха <i
-                                    class="fas fa-angle-double-right"></i></a>
-                                <ul>
-                                    <li><a href='./Projects.html'><i class="fas fa-chevron-circle-right"></i> ACA</a>
-                                    </li>
-                                    <li><a href='./Projects.html'><i class="fas fa-chevron-circle-right"></i> ACB</a>
-                                    </li>
-                                    <li><a href='./Projects.html'><i class="fas fa-chevron-circle-right"></i> ACC</a>
-                                    </li>
-                                    <li><a href='./Projects.html'><i class="fas fa-chevron-circle-right"></i> ACF</a>
-                                    </li>
-                                    <li><a href='./Projects.html'><i class="fas fa-chevron-circle-right"></i>
-                                        ACV-ACD</a></li>
-                                    <li><a href='./Projects.html'><i class="fas fa-chevron-circle-right"></i>
-                                        ACE-ACQ</a></li>
-                                </ul>
-                            </li>
-                            <li class='sub-drop'><a href='./card.html'> Системы воздуховодов <i
-                                    class="fas fa-angle-double-right"></i></a>
-                                <ul>
-                                    <li><a href='./Projects.html'><i class="fas fa-chevron-circle-right"></i> CAS</a>
-                                    </li>
-                                    <li><a href='./Projects.html'><i class="fas fa-chevron-circle-right"></i>
-                                        CDA-CDB</a></li>
-                                    <li><a href='./Projects.html'><i class="fas fa-chevron-circle-right"></i>
-                                        CIA-CIB</a></li>
-                                    <li><a href='./Projects.html'><i class="fas fa-chevron-circle-right"></i> CKA</a>
-                                    </li>
-                                    <li><a href='./Projects.html'><i class="fas fa-chevron-circle-right"></i> CMA</a>
-                                    </li>
-                                    <li><a href='./Projects.html'><i class="fas fa-chevron-circle-right"></i>
-                                        CRA-CRB</a></li>
-                                    <li><a href='./Projects.html'><i class="fas fa-chevron-circle-right"></i>
-                                        CRC-CRD</a></li>
-                                    <li><a href='./Projects.html'><i class="fas fa-chevron-circle-right"></i>
-                                        CTA-CTB</a></li>
-                                </ul>
-                            </li>
                         </ul>
                     </li>
                     <li class='drop-down'><a href='./categories'> Сетевые элементы <i
@@ -198,8 +62,8 @@
                         </ul>
                     </li>
                     <select name="lang" id="lang">
-                    <option value="ru"><img src="./images/ru.png" alt="png"> RU</option>
-                    <option value="uz"><img src="./images/uz.png" alt="png"> UZ</option>
+                    <option value="ru"><img src="{{asset('./images/ru.png')}}" alt="png"> RU</option>
+                    <option value="uz"><img src="{{asset('./images/uz.png')}}" alt="png"> UZ</option>
                 </select>
             </ul>
             <!-- The overlay -->
@@ -255,8 +119,8 @@
                                     class="fab fa-facebook seti"></i></a></li>
                     </ul>
                     <select name="lang" id="lang">
-                        <option value="ru"><a href=""><img src="./images/ru.png" alt="jpg"> RU</a></option>
-                        <option value="uz"><a href=""><img src="./images/uz.png" alt="jpg"> UZ</a></option>
+                        <option value="ru"><a href=""><img src="{{asset('./images/ru.png')}}" alt="jpg"> RU</a></option>
+                        <option value="uz"><a href=""><img src="{{asset('./images/uz.png')}}" alt="jpg"> UZ</a></option>
                     </select>
                 </div>
 

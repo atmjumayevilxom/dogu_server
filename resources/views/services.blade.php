@@ -2,7 +2,7 @@
 
 @section('meta')
 <link rel="stylesheet" href="css/Service.css">
-<title>Services</title>
+<title>Servis</title>
 
 @stop
 @section('content')
@@ -25,7 +25,7 @@
             Все необходимые запчасти находятся на складе в наличии.</p>
         <div class="card">
             <div class="card-img">
-                <img src="./images/1_11.jpg" alt="">
+                <img src="{{asset('./images/1_11.jpg')}}" alt="">
             </div>
             <div class="card-icon">
                 <a href="./images/1_11.jpg"><i class="fas fa-search-plus"></i></a>
@@ -33,7 +33,7 @@
         </div>
         <div class="card">
             <div class="card-img">
-                <img src="./images/1_12.jpg" alt="">
+                <img src="{{asset('./images/1_12.jpg')}}" alt="">
             </div>
             <div class="card-icon">
                 <a href="./images/1_12.jpg"><i class="fas fa-search-plus"></i></a>
@@ -41,7 +41,7 @@
         </div>
         <div class="card card-margin">
             <div class="card-img">
-                <img src="./images/1_13.jpg" class="card-bottom" alt="">
+                <img src="{{asset('./images/1_13.jpg')}}" class="card-bottom" alt="">
             </div>
             <div class="card-icon">
                 <a href="./images/1_13.jpg"><i class="fas fa-search-plus"></i></a>
@@ -49,7 +49,7 @@
         </div>
         <div class="card card-margin">
             <div class="card-img">
-                <img src="./images/dogu-company.jpg" class="card-bottom" alt="">
+                <img src="{{asset('./images/dogu-company.jpg')}}" class="card-bottom" alt="">
             </div>
             <div class="card-icon">
                 <i class="fas fa-search-plus"></i>

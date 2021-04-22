@@ -26,7 +26,7 @@
             <div class="container">
                 <div class="dev-section">
                     <div class="dev-section__img">
-                        <img src="./images/four-season.png" alt="JPG">
+                        <img src="{{asset('./images/four-season.png')}}" alt="JPG">
                     </div>
                     <div class="dev-section__text dev">
                         <div class="dev__title">Отдел <br>разработок</div>
@@ -50,7 +50,7 @@
             <div class="container">
                 <div class="catalog-product__details">
                     <div class="catalog-product__img">
-                        <img src="./images/word_fist.jpg" alt="JPG">
+                        <img src="{{asset('./images/word_fist.jpg')}}" alt="JPG">
                     </div>
                     <div class="catalog-product__text product">
                         <div class="product__title">

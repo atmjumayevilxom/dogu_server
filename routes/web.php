@@ -1,6 +1,12 @@
 <?php
 
+use App\Models\Product;
+use App\Models\Category;
+use TCG\Voyager\Facades\Voyager;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\StaticController;
+use App\Http\Controllers\ProductController;
+use App\Http\Controllers\CategoryController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,12 +19,19 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('product');
-});
-Route::get('/categories', function () {
-    return view('categories');
-});
-Route::get('/categories', function () {
-    return view('category-detail');
+Route::get('/', [StaticController::class, 'home']);
+Route::get('/company', [StaticController::class, 'company']);
+Route::get('/proect', [StaticController::class, 'proect']);
+Route::get('/servis', [StaticController::class, 'servis']);
+
+Route::get('/categories', [CategoryController::class, 'index']);
+Route::get('/categories/{id}', [CategoryController::class, 'show']);
+
+Route::get('/products/{id}', [ProductController::class, 'show']);
+
+
+
+
+Route::group(['prefix' => 'admin'], function () {
+    Voyager::routes();
 });
