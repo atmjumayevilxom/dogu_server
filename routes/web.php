@@ -1,37 +1,25 @@
 <?php
 
-use App\Models\Product;
-use App\Models\Category;
 use TCG\Voyager\Facades\Voyager;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\StaticController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\CategoryController;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
-
-Route::get('/', [StaticController::class, 'home']);
-Route::get('/company', [StaticController::class, 'company']);
-Route::get('/proect', [StaticController::class, 'proect']);
-Route::get('/servis', [StaticController::class, 'servis']);
-
-Route::get('/categories', [CategoryController::class, 'index']);
-Route::get('/categories/{id}', [CategoryController::class, 'show']);
-
-Route::get('/products/{id}', [ProductController::class, 'show']);
-
-
-
-
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
+});
+
+Route::prefix('{locale}')->middleware('set.locale')->group(function () {
+    Route::get('/', [StaticController::class, 'home']);
+    Route::get('/company', [StaticController::class, 'company']);
+    Route::get('/project', [StaticController::class, 'project']);
+    Route::get('/service', [StaticController::class, 'service']);
+
+    Route::prefix('/categories')->name('category.')->group(function () {
+        Route::get('', [CategoryController::class, 'index'])->name('index');
+        Route::get('/{id}', [CategoryController::class, 'show'])->name('show');
+    });
+
+    Route::get('/products/{id}', [ProductController::class, 'show'])->name('product.show');
 });

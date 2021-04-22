@@ -4,11 +4,11 @@ namespace App\Http\Controllers;
 
 use App\Models\Category;
 
-class CategoryController extends Controller
+class CategoryController extends BaseController
 {
     public function index()
     {
-        $categories = Category::get();
+        $categories = Category::get()->translate(app()->getLocale());
         return view('categories', compact('categories'));
     }
 

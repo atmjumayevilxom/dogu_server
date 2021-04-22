@@ -12,7 +12,7 @@
     <header>
         <div class="header__in">
             <div class="header__title">
-                Дышите вместе с <span class="caption">DOGU!</span>
+                {!! __('home.Дышите вместе с <span class="caption">DOGU!</span>') !!}
             </div>
             <div class="header__back"></div>
         </div>

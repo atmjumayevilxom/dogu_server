@@ -2,27 +2,25 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Category;
-
-
-
-class StaticController extends Controller
+class StaticController extends BaseController
 {
     public function home()
     {
-
         return view('home');
     }
+
     public function company()
     {
         return view('company');
     }
-    public function proect()
+
+    public function project()
     {
-        return view('proect');
+        return view('project');
     }
-    public function servis()
+
+    public function service()
     {
-        return view('services');
+        return view('service');
     }
 }
