@@ -1,0 +1,80 @@
+.company {
+    margin: 70px;
+}
+.company .company__text{
+    font-size: 15px;
+    font-weight: 500;
+    font-family: 'poppins';
+    color: #555555;
+}
+.company .company__about{
+    display: flex;
+    justify-content: center;
+}
+.company .company__about .company__main{
+    width: 600px;
+}
+.company .presentation{
+    font-family: 'inter';
+    font-style: italic;
+}
+.company .company__file figure{
+    position: relative;
+}
+.company .company__file a .fa-link{
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    font-size: 35px;
+    color: white;
+}
+.company .company__file .fa-link:hover{
+   color: #06b6fb;
+   transition: 300ms;
+}
+@media (max-width:1200px) {
+    .company .company__about .company__main{
+        width: 400px;
+    }
+}
+@media (max-width: 991px) {
+    .company .company__about .company__main{
+        width: 300px;
+    }
+    .company .company__file a .fa-link{
+        font-size: 25px;
+
+    }
+    .company .company__file img{
+        width: 300px;
+        height: 225px;
+    }
+}
+@media (max-width: 786px){
+    .company .company__about{
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto ;
+    }
+    .company .company__about .company__main{
+        margin: 0 auto;
+    }
+    .company .company__file figure img{
+        display: block;
+        margin: 0 auto;
+      
+    }
+    .company .company__file figure .presentation{
+        text-align: center;
+      
+    }
+}
+
+@media (max-width: 510px) {
+    .company{
+        margin: 50px auto;
+    }
+    .company .company__about .company__main{
+        width: 100%;
+    }
+}
