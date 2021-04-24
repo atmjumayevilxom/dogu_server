@@ -1,19 +1,18 @@
 @extends('layouts.master')
 
 @section('meta')
+<link rel="stylesheet" href="{{asset('css/card.css')}}">
     <title>{{ $category->name }}</title>
 @stop
 
 @section('content')
-    <h1>{{ $category->name }}</h1>
-    <ul>
-        @foreach($category->products as $product)
-            <li>
-                <img src="{{ Voyager::image( $product->image ) }}" 
-                    alt="{{ $product->name }}" 
-                    width="400">
-                <a href="{{ url('/products/' . $product->id) }}">{{ $product->name }}</a>
-            </li>
-        @endforeach
-    </ul>
+<div class="cards_2">
+    @foreach($category->products as $product)
+    <div class="card_2 wow fadeInUp">
+        <img src="{{ Voyager::image( $product->image ) }}" alt="" class="card_image_2">
+        <a href="{{ url('/products/' . $product->id) }}">{{ $product->name }}</a>
+    </div>
+    @endforeach
+</div>
+
 @stop

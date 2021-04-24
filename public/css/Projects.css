@@ -1,0 +1,47 @@
+.continer{
+    width: 1920px;
+    margin: 0 auto;
+    padding: 0;
+    max-width: 90%;
+}
+.hedir img{
+    width: 590px;
+    
+}
+.hedir{
+    padding: 0;
+     text-align: center; 
+   margin-top: 40px;
+
+}
+p{
+    font-weight: 400;
+    font-family: inter;
+    font-size: 16px;
+    color: #54595F;
+}
+@media (max-width: 800px) {
+    .continer{
+        width: 100%;
+        margin: 0 auto;
+        padding: 0;
+        max-width: 90%;
+    }
+    .hedir img{
+        width: 100%;
+        
+    }
+    .hedir{
+        padding: 0;
+         text-align: center; 
+       margin-top: 40px;
+    
+    }
+    p{
+        font-weight: 400;
+        font-family: inter;
+        font-size: 16px;
+        color: #54595F;
+        margin-bottom: 40px;
+    }
+}

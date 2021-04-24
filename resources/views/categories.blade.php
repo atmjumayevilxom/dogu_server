@@ -1,19 +1,21 @@
 @extends('layouts.master')
 
 @section('meta')
-    <title>Categories page</title>
+    <link rel="stylesheet" href="{{ asset('./css/categories.css') }}">
+    <title>Categories</title>
 @stop
 
 @section('content')
-    <h1>This is categories page</h1>
-    <ul>
-        @foreach($categories as $category)
-            <li>
-                <img src="{{ Voyager::image( $category->image ) }}" 
-                    alt="{{ $category->name }}" 
-                    width="400">
-                <a href="{{ url('/categories/' . $category->id) }}">{{ $category->name }}</a>
-            </li>
-        @endforeach
-    </ul>
+
+
+<div class="cards">
+    @foreach ($categories as $category)
+    <div class="card">
+        <img src="{{ Voyager::image( $category->image ) }}" alt="{{$category->name}}" class="card_image">
+        <a href="{{ url('/categories/' . $category->id) }}">{{$category->name}}</a>
+    </div>
+    @endforeach
+</div>
+
+
 @stop

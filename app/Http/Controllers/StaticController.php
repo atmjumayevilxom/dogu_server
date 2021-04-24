@@ -2,11 +2,25 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Product;
-
-class ProductController extends Controller
+class StaticController extends Controller
 {
-    public function home() {
+    public function home()
+    {
         return view('home');
+    }
+
+    public function company()
+    {
+        return view('company');
+    }
+
+    public function project()
+    {
+        return view('project');
+    }
+
+    public function service()
+    {
+        return view('service');
     }
 }

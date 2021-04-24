@@ -6,12 +6,14 @@ use App\Models\Category;
 
 class CategoryController extends Controller
 {
-    public function index() {
-        $categories = Category::get();
+    public function index()
+    {
+        $categories = Category::get()->translate(app()->getLocale());
         return view('categories', compact('categories'));
     }
 
-    public function show($id) {
+    public function show($id)
+    {
         $category = Category::find($id);
         return view('category-detail', compact('category'));
     }

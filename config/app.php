@@ -80,31 +80,9 @@ return [
     |
     */
 
-    'locale' => 'en',
-
-    /*
-    |--------------------------------------------------------------------------
-    | Application Fallback Locale
-    |--------------------------------------------------------------------------
-    |
-    | The fallback locale determines the locale to use when the current one
-    | is not available. You may change the value to correspond to any of
-    | the language folders that are provided through your application.
-    |
-    */
-
-    'fallback_locale' => 'en',
-
-    /*
-    |--------------------------------------------------------------------------
-    | Faker Locale
-    |--------------------------------------------------------------------------
-    |
-    | This locale will be used by the Faker PHP library when generating fake
-    | data for your database seeds. For example, this will be used to get
-    | localized telephone numbers, street address information and more.
-    |
-    */
+    'locale' => 'ru',
+    'fallback_locale' => 'ru',
+    'available_locales' => ['ru', 'uz'],
 
     'faker_locale' => 'en_US',
 
@@ -174,6 +152,7 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
+        App\Providers\ViewServiceProvider::class,
 
     ],
 

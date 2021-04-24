@@ -1,0 +1,252 @@
+main {
+  max-width: 2040px;
+  font-family: inter !important; }
+  main .container .product-text {
+    width: 100%;
+    margin-top: 80px;
+    color: #5A5655;
+    font-size: 14px !important; }
+    main .container .product-text .text-1 {
+      line-height: 30px;
+      margin-bottom: 20px; }
+    main .container .product-text .text-2, main .container .product-text .text-3 {
+      margin-left: 20px;
+      line-height: 25px; }
+  main .container .main-center .text-4 {
+    margin: 20px 0px;
+    font-size: 20px;
+    color: black;
+    font-weight: 600; }
+  main .container .main-center .text-5 {
+    color: #5A5655;
+    margin-left: 10px;
+    font-size: 14px;
+    width: 80%; }
+  main .container .main-center .images-card {
+    margin: 20px 0; }
+    main .container .main-center .images-card h3 {
+      margin: 20px 0px;
+      font-size: 20px;
+      color: black;
+      font-weight: 600; }
+    main .container .main-center .images-card .img-yaroslav, main .container .main-center .images-card .img-san-peterburg, main .container .main-center .images-card .img-moskva {
+      display: flex; }
+      main .container .main-center .images-card .img-yaroslav img, main .container .main-center .images-card .img-san-peterburg img, main .container .main-center .images-card .img-moskva img {
+        width: 48%; }
+      main .container .main-center .images-card .img-yaroslav img:nth-child(1), main .container .main-center .images-card .img-san-peterburg img:nth-child(1), main .container .main-center .images-card .img-moskva img:nth-child(1) {
+        margin-right: 20px; }
+    main .container .main-center .images-card .blog h3 {
+      display: block;
+      margin-left: 80px; }
+    main .container .main-center .images-card .blog img {
+      width: 100% !important;
+      margin: 20px auto;
+      display: block; }
+
+@media (max-width: 1100px) {
+  main .container .main-center .images-card h3 {
+    margin: 20px 0px;
+    font-size: 18px;
+    color: black;
+    font-weight: 600; }
+  main .container .main-center .images-card .blog h3 {
+    display: block;
+    margin-left: 0px; }
+  main .container .main-center .images-card .blog img {
+    width: 100% !important;
+    margin: 20px auto;
+    display: block; }
+  main .container .main-center .images-card .blog .height {
+    height: 400px; } }
+@media (max-width: 700px) {
+  main .container .product-text {
+    width: 100%;
+    margin-top: 80px;
+    color: #5A5655;
+    font-size: 12px !important; }
+    main .container .product-text .text-1 {
+      line-height: 30px;
+      margin-bottom: 20px; }
+    main .container .product-text .text-2, main .container .product-text .text-3 {
+      margin-left: 20px;
+      line-height: 25px; }
+    main .container .product-text .text-3 span {
+      color: #5A5655;
+      font-size: 12px;
+      font-weight: 800; }
+  main .container .main-center .text-4 {
+    margin: 20px 0px;
+    font-size: 20px;
+    color: black;
+    font-weight: 600; }
+  main .container .main-center .text-5 {
+    color: #5A5655;
+    margin-left: 10px;
+    font-size: 12px;
+    width: 80%; }
+  main .container .main-center .images-card {
+    margin: 20px 0; }
+    main .container .main-center .images-card h3 {
+      margin: 20px 0px;
+      font-size: 14px;
+      color: black;
+      font-weight: 600; }
+    main .container .main-center .images-card .img-yaroslav, main .container .main-center .images-card .img-san-peterburg, main .container .main-center .images-card .img-moskva {
+      display: flex; }
+      main .container .main-center .images-card .img-yaroslav img, main .container .main-center .images-card .img-san-peterburg img, main .container .main-center .images-card .img-moskva img {
+        width: 48%; }
+      main .container .main-center .images-card .img-yaroslav img:nth-child(1), main .container .main-center .images-card .img-san-peterburg img:nth-child(1), main .container .main-center .images-card .img-moskva img:nth-child(1) {
+        margin-right: 20px; }
+    main .container .main-center .images-card .blog h3 {
+      display: block;
+      margin-left: 00px; }
+    main .container .main-center .images-card .blog img {
+      width: 100% !important;
+      margin: 20px auto;
+      display: block; } }
+@media (max-width: 500px) {
+  main .container .product-text {
+    width: 100%;
+    margin-top: 80px;
+    color: #5A5655;
+    font-size: 12px !important; }
+    main .container .product-text .text-1 {
+      line-height: 30px;
+      margin-bottom: 20px; }
+    main .container .product-text .text-2, main .container .product-text .text-3 {
+      margin-left: 20px;
+      line-height: 25px; }
+    main .container .product-text .text-3 span {
+      color: #5A5655;
+      font-size: 11px;
+      font-weight: 800; }
+  main .container .main-center .text-4 {
+    margin: 20px 0px;
+    font-size: 14px;
+    color: black;
+    font-weight: 600; }
+  main .container .main-center .text-5 {
+    color: #5A5655;
+    margin-left: 10px;
+    font-size: 12px;
+    width: 80%; }
+  main .container .main-center .images-card {
+    margin: 20px 0; }
+    main .container .main-center .images-card h3 {
+      margin: 20px 0px;
+      font-size: 12px;
+      color: black;
+      font-weight: 600; }
+    main .container .main-center .images-card .img-yaroslav, main .container .main-center .images-card .img-san-peterburg, main .container .main-center .images-card .img-moskva {
+      display: flex; }
+      main .container .main-center .images-card .img-yaroslav img, main .container .main-center .images-card .img-san-peterburg img, main .container .main-center .images-card .img-moskva img {
+        width: 48%; }
+      main .container .main-center .images-card .img-yaroslav img:nth-child(1), main .container .main-center .images-card .img-san-peterburg img:nth-child(1), main .container .main-center .images-card .img-moskva img:nth-child(1) {
+        margin-right: 20px; }
+    main .container .main-center .images-card .blog h3 {
+      display: block;
+      margin-left: 00px; }
+    main .container .main-center .images-card .blog .height {
+      height: auto; }
+    main .container .main-center .images-card .blog img {
+      width: 100% !important;
+      margin: 20px auto;
+      display: block; } }
+@media (max-width: 500px) {
+  main .container .product-text {
+    width: 100%;
+    margin-top: 80px;
+    color: #5A5655;
+    font-size: 12px !important; }
+    main .container .product-text .text-1 {
+      line-height: 30px;
+      margin-bottom: 20px; }
+    main .container .product-text .text-2, main .container .product-text .text-3 {
+      margin-left: 20px;
+      line-height: 25px; }
+    main .container .product-text .text-3 span {
+      color: #5A5655;
+      font-size: 11px;
+      font-weight: 800; }
+  main .container .main-center .text-4 {
+    margin: 20px 0px;
+    font-size: 14px;
+    color: black;
+    font-weight: 600; }
+  main .container .main-center .text-5 {
+    color: #5A5655;
+    margin-left: 10px;
+    font-size: 12px;
+    width: 80%; }
+  main .container .main-center .images-card {
+    margin: 20px 0; }
+    main .container .main-center .images-card h3 {
+      margin: 20px 0px;
+      font-size: 12px;
+      color: black;
+      font-weight: 600; }
+    main .container .main-center .images-card .img-yaroslav, main .container .main-center .images-card .img-san-peterburg, main .container .main-center .images-card .img-moskva {
+      display: flex; }
+      main .container .main-center .images-card .img-yaroslav img, main .container .main-center .images-card .img-san-peterburg img, main .container .main-center .images-card .img-moskva img {
+        width: 48%; }
+      main .container .main-center .images-card .img-yaroslav img:nth-child(1), main .container .main-center .images-card .img-san-peterburg img:nth-child(1), main .container .main-center .images-card .img-moskva img:nth-child(1) {
+        margin-right: 20px; }
+    main .container .main-center .images-card .blog h3 {
+      display: block;
+      margin-left: 00px; }
+    main .container .main-center .images-card .blog .height {
+      height: auto; }
+    main .container .main-center .images-card .blog img {
+      width: 100% !important;
+      margin: 20px auto;
+      display: block; } }
+@media (max-width: 360px) {
+  main .container .product-text {
+    width: 100%;
+    margin-top: 80px;
+    color: #5A5655;
+    font-size: 12px !important; }
+    main .container .product-text .text-1 {
+      line-height: 30px;
+      margin-bottom: 20px; }
+    main .container .product-text .text-2, main .container .product-text .text-3 {
+      margin-left: 20px;
+      line-height: 25px; }
+    main .container .product-text .text-3 span {
+      color: #5A5655;
+      font-size: 11px;
+      font-weight: 800; }
+  main .container .main-center .text-4 {
+    margin: 20px 0px;
+    font-size: 10px;
+    color: black;
+    font-weight: 600; }
+  main .container .main-center .text-5 {
+    color: #5A5655;
+    margin-left: 10px;
+    font-size: 12px;
+    width: 80%; }
+  main .container .main-center .images-card {
+    margin: 20px 0; }
+    main .container .main-center .images-card h3 {
+      margin: 20px 0px;
+      font-size: 12px;
+      color: black;
+      font-weight: 600; }
+    main .container .main-center .images-card .img-yaroslav, main .container .main-center .images-card .img-san-peterburg, main .container .main-center .images-card .img-moskva {
+      display: flex; }
+      main .container .main-center .images-card .img-yaroslav img, main .container .main-center .images-card .img-san-peterburg img, main .container .main-center .images-card .img-moskva img {
+        width: 48%; }
+      main .container .main-center .images-card .img-yaroslav img:nth-child(1), main .container .main-center .images-card .img-san-peterburg img:nth-child(1), main .container .main-center .images-card .img-moskva img:nth-child(1) {
+        margin-right: 20px; }
+    main .container .main-center .images-card .blog h3 {
+      display: block;
+      margin-left: 00px; }
+    main .container .main-center .images-card .blog .height {
+      height: auto; }
+    main .container .main-center .images-card .blog img {
+      width: 100% !important;
+      margin: 20px auto;
+      display: block; } }
+
+/*# sourceMappingURL=product.css.map */
