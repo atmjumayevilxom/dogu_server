@@ -32,21 +32,21 @@
                       </a>
                   </li>
                   <li class='drop-down'>
-                      <a href="{{ route('category.index', app()->getLocale()) }}">
+                      <a href="{{ route('category.index', session()->get('locale')) }}">
                           ОБОРУДОВАНИЕ
                           <i class="fas fa-angle-right"></i>
                       </a>
                       <ul>
-                          @foreach ($categories->unfeatured as $category)
+                          @foreach ($context->regular as $category)
                               <li class='sub-drop'>
-                                  <a href='{{ route('category.show', ['locale' => app()->getLocale(), 'id' => $category->id]) }}'>
+                                  <a href='{{ route('category.show', ['locale' => session()->get('locale'), 'id' => $category->id]) }}'>
                                       {{ $category->name }}
                                       <i class="fas fa-angle-double-right"></i>
                                   </a>
                                   <ul>
-                                      @foreach ($category->products as $product)
+                                      @foreach ($category->products->translate(session()->get('locale')) as $product)
                                           <li>
-                                              <a href='{{ route('product.show', ['locale' => app()->getLocale(), 'id' => $product->id]) }}'>
+                                              <a href='{{ route('product.show', ['locale' => session()->get('locale'), 'id' => $product->id]) }}'>
                                                   <i class="fas fa-chevron-circle-right"></i>
                                                   {{ $product->name }}
                                               </a>
@@ -63,9 +63,9 @@
                           <i class="fas fa-angle-right"></i>
                       </a>
                       <ul>
-                          @foreach ($categories->featured as $category)
+                          @foreach ($context->featured as $category)
                             <li>
-                                <a href='{{ route('category.show', ['locale' => app()->getLocale(), 'id' => $category->id]) }}'>
+                                <a href='{{ route('category.show', ['locale' => session()->get('locale'), 'id' => $category->id]) }}'>
                                     <i class="fas fa-chevron-circle-right"></i>
                                     {{ $category->name }}
                                 </a>
@@ -74,10 +74,29 @@
                       </ul>
                   </li>
 
-                  <select name="lang" id="lang">
-                      <option value="ru"><img src="{{ asset('./images/ru.png') }}" alt="png"> RU</option>
-                      <option value="uz"><img src="{{ asset('./images/uz.png') }}" alt="png"> UZ</option>
-                  </select>
+                    <li>
+                        <form action="{{ route('set.locale') }}" method="POST">
+                            @csrf
+                            <select name="locale" id="lang" onchange="this.form.submit()">
+                                <option value="ru"
+                                    @if (session()->get('locale') === "ru")
+                                        selected="selected"
+                                    @endif
+                                >
+                                    <img src="{{ asset('./images/ru.png') }}" alt="png">
+                                    RU
+                                </option>
+                                <option value="uz"
+                                    @if (session()->get('locale') === "uz")
+                                        selected="selected"
+                                    @endif
+                                >
+                                    <img src="{{ asset('./images/uz.png') }}" alt="png">
+                                    UZ
+                                </option>
+                            </select>
+                        </form>
+                    </li>
               </ul>
               <!-- The overlay -->
               <div id="myNav" class="overlay">

@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('meta')
-<link rel="stylesheet" href="{{asset('./css/categories.css')}}">
+    <link rel="stylesheet" href="{{ asset('./css/categories.css') }}">
     <title>Categories</title>
 @stop
 

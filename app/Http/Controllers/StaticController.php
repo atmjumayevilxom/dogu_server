@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-class StaticController extends BaseController
+class StaticController extends Controller
 {
     public function home()
     {

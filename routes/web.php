@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\StaticController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\LocaleController;
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
@@ -23,3 +24,5 @@ Route::prefix('{locale}')->middleware('set.locale')->group(function () {
 
     Route::get('/products/{id}', [ProductController::class, 'show'])->name('product.show');
 });
+
+Route::post('/locale', [LocaleController::class, 'store'])->name('set.locale');
