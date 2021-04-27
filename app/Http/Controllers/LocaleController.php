@@ -7,6 +7,15 @@ use Illuminate\Support\Str;
 
 class LocaleController extends Controller
 {
+    public function redirect() {
+        if (session()->has('locale')) {
+            $locale = session()->get('locale');
+        } else {
+            $locale = config('app.fallback_locale');
+        }
+        return redirect()->to(route('home', $locale));
+    }
+    
     public function store(Request $request)
     {
         $locale = $request->locale;
