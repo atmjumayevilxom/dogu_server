@@ -18,6 +18,7 @@ Route::prefix('{locale}')->middleware('set.locale')->group(function () {
     Route::get('/company', [StaticController::class, 'company']);
     Route::get('/project', [StaticController::class, 'project']);
     Route::get('/service', [StaticController::class, 'service']);
+    Route::get('/video', [StaticController::class, 'video']);
 
     Route::prefix('/categories')->name('category.')->group(function () {
         Route::get('', [CategoryController::class, 'index'])->name('index');

@@ -9,14 +9,57 @@
 @stop
 @section('content')
 
-    <header>
-        <div class="header__in">
-            <div class="header__title">
-                {!! __('home.Дышите вместе с <span class="caption">DOGU!</span>') !!}
+<header>
+    <!-- Swiper -->
+    <div class="swiper-container2 mySwiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide swiper-backslide">
+                <div class="header__back"></div>
+                <img src="{{ asset('images/slider/dogu-company.jpg') }}" alt="dogu">
+                <div class="header__title">
+                    Дышите вместе с <span class="caption">DOGU!</span>
+                </div>
             </div>
-            <div class="header__back"></div>
+            <div class="swiper-slide swiper-backslide">
+                <div class="header__back"></div>
+                <img src="{{ asset('images/slider/1.jpg') }}" alt="dogu">
+                <div class="header__title">
+                    Дышите вместе с <span class="caption">DOGU!</span>
+                </div>
+            </div>
+            <div class="swiper-slide swiper-backslide">
+                <div class="header__back"></div>
+                <img src="{{ asset('images/slider/2.jpg') }}" alt="dogu">
+                <div class="header__title">
+                    Дышите вместе с <span class="caption">DOGU!</span>
+                </div>
+            </div>
+            <div class="swiper-slide swiper-backslide">
+                <div class="header__back"></div>
+                <img src="{{ asset('images/slider/3.jpg') }}" alt="dogu">
+                <div class="header__title">
+                    Дышите вместе с <span class="caption">DOGU!</span>
+                </div>
+            </div>
+            <div class="swiper-slide swiper-backslide">
+                <div class="header__back"></div>
+                <img src="{{ asset('images/slider/4.jpg') }}" alt="dogu">
+                <div class="header__title">
+                    Дышите вместе с <span class="caption">DOGU!</span>
+                </div>
+            </div>
+            <div class="swiper-slide swiper-backslide">
+                <div class="header__back"></div>
+                <img src="{{ asset('images/slider/5.jpg') }}" alt="dogu">
+                <div class="header__title">
+                    Дышите вместе с <span class="caption">DOGU!</span>
+                </div>
+            </div>
         </div>
-    </header>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
+</header>
 
 
     <!-- Document Wrapper
@@ -70,7 +113,70 @@
             </div>
         </div>
     </main>
+    <section class="ag-slide-block">
+        <p class="swiper_project">Наши реализованные проекты</p>
 
+        <div class="swiper-container">
+            <ul class="swiper-wrapper ag-slide_list">
+                <li class="swiper-slide ag-slide_item" data-swiper-autoplay="1500" data-swiper-slide-index="0">
+                    <!--data-swiper-autoplay это скорость autoplay для слайдов-->
+                    <img src="{{asset('./images/1_1.jpg')}}" class="ag-slide_img" alt="">
+
+                </li>
+                <li class="swiper-slide ag-slide_item" data-swiper-autoplay="1500" data-swiper-slide-index="1">
+                    <img src="{{asset('./images/1_2.jpg')}}" class="ag-slide_img" alt="">
+
+                </li>
+                <li class="swiper-slide ag-slide_item" data-swiper-autoplay="1500" data-swiper-slide-index="2">
+                    <img src="{{asset('./images/1_3.jpg')}}" class="ag-slide_img" alt="">
+
+                </li>
+                <li class="swiper-slide ag-slide_item" data-swiper-autoplay="1500" data-swiper-slide-index="3">
+                    <img src="{{asset('./images/1_4.jpg')}}" class="ag-slide_img" alt="">
+
+                </li>
+                <li class="swiper-slide ag-slide_item" data-swiper-autoplay="1500" data-swiper-slide-index="4">
+                    <img src="{{asset('./images/1_5.jpg')}}" class="ag-slide_img" alt="">
+
+                </li>
+                <li class="ag-slide_item swiper-slide swiper-slide-prev" data-swiper-autoplay="1500" data-swiper-slide-index="5">
+                    <img src="{{asset('./images/1_6.jpg')}}" class="ag-slide_img" alt="">
+
+                </li>
+                <li class="ag-slide_item swiper-slide swiper-slide-active" data-swiper-autoplay="1500" data-swiper-slide-index="6">
+                    <img src="{{asset('./images/1_10.jpg')}}" class="ag-slide_img" alt="">
+
+                </li>
+                <li class="ag-slide_item swiper-slide swiper-slide-next" data-swiper-autoplay="1500" data-swiper-slide-index="7">
+                    <img src="{{asset('./images/1_9.jpg')}}" class="ag-slide_img" alt="">
+
+                </li>
+
+
+            </ul>
+        </div>
+    </section>
+    <!-- Swiper ends here -->
+
+    <!-- logos starts here -->
+    <div class="brands">
+        <div class="logos">
+            <div class="logos-brand">
+                <div class="item-01">
+                    <img src="{{ asset('images/logo/1.png')}}" alt="JPG">
+                    <img src="{{ asset('images/logo/2.png')}}" alt="JPG">
+                    <img src="{{ asset('images/logo/3.jpg')}}" alt="JPG">
+                    <img src="{{ asset('images/logo/5.jpg')}}" alt="JPG">
+                    <img src="{{ asset('images/logo/6.png')}}" alt="JPG">
+                    <img src="{{ asset('images/logo/8.jpg')}}" alt="JPG">
+                    <img src="{{ asset('images/logo/10.png')}}" alt="JPG">
+                    <img src="{{ asset('images/logo/1.png')}}" alt="JPG">
+                    <img src="{{ asset('images/logo/2.png')}}" alt="JPG">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- logos ends here -->
 
 
 @stop

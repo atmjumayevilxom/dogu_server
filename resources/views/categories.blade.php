@@ -12,7 +12,7 @@
     @foreach ($categories as $category)
     <div class="card">
         <img src="{{ Voyager::image( $category->image ) }}" alt="{{$category->name}}" class="card_image">
-        <a href="{{ url('/categories/' . $category->id) }}">{{$category->name}}</a>
+        <a href="{{ url('/categories/' . $category->id) }}"><span herf="#">{{$category->name}}</span></a>
     </div>
     @endforeach
 </div>
