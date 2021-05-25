@@ -26,7 +26,7 @@
                   </div>
 
                   <li class='drop-down'>
-                      <a href="{{ url('company') }}">
+                      <a href="{{ route('company', session()->get('locale')) }}">
                           Компания
                       </a>
                   </li>
@@ -57,7 +57,7 @@
                       </ul>
                   </li>
                   <li class='drop-down'>
-                      <a href='./categories'>
+                      <a href='{{ route('category.index', session()->get('locale')) }}'>
                           Сетевые элементы
                           <i class="fas fa-angle-right"></i>
                       </a>

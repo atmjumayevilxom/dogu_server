@@ -120,9 +120,12 @@
             <div class="card">
                 <p class="call-title">Мы можем вам перезвонить, если захотите!</p>
                 <p class="call-text"> Введите свой номер телефона и мы с вами свяжемся.</p>
-                <form action="sendhtmlemail" method="GET">
+
+                {{-- Mail form starts --}}
+                <form action="{{ route('mail.post.callback') }}" method="POST">
+                    @csrf
                     <input type="text" name="name" placeholder="Ваше имя и фамилия" required>
-                    <input type="text" name="number" placeholder="+ (998)" required>
+                    <input type="text" name="phone" placeholder="+998" required>
                     <button class="svg-wrapper">
                         <svg height="60" width="320" xmlns="http://www.w3.org/2000/svg">
                             <rect class="shape" height="60" width="320" />
@@ -130,6 +133,8 @@
                         </svg>
                     </button>
                 </form>
+                {{-- Mail form ends --}}
+
             </div>
         </div>
 
