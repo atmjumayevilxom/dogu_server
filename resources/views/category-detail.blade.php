@@ -10,7 +10,7 @@
     @foreach($category->products as $product)
     <div class="card_2 wow fadeInUp">
         <img src="{{ Voyager::image( $product->image ) }}" alt="" class="card_image_2">
-        <a href="{{ url('/products/' . $product->id) }}">{{ $product->name }}</a>
+        <a href="{{ url('/products/' . $product->id) }}"><span herf="#">{{$category->name}}</span></a>
     </div>
     @endforeach
 </div>
