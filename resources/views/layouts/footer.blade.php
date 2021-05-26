@@ -7,10 +7,10 @@
             <div class="col-sm-4">
                 <p class="title">{!! __('footer.О компании') !!}</p>
                 <ul class="navbar">
-                    <li><a href="company.html">{!! __('footer.О компании') !!}</a></li>
-                    <li><a href="product.html">{!! __('footer.Проекты') !!}</a></li>
-                    <li><a href="services.html">{!! __('footer.Сервис') !!}</a></li>
-                    <li><a href="video.html">{!! __('footer.Видео') !!}</a></li>
+                    <li><a href="{{ route('company', session()->get('locale')) }}">{!! __('footer.О компании') !!}</a></li>
+                    <li><a href="{{ route('project', session()->get('locale')) }}">{!! __('footer.Проекты') !!}</a></li>
+                    <li><a href="{{ route('service', session()->get('locale')) }}">{!! __('footer.Сервис') !!}</a></li>
+                    <li><a href="{{ route('video', session()->get('locale')) }}">{!! __('footer.Видео') !!}</a></li>
                 </ul>
             </div>
             <div class="col-sm-4">
@@ -130,6 +130,8 @@
                         </svg>
                     </button>
                 </form>
+                {{-- Mail form ends --}}
+
             </div>
         </div>
 

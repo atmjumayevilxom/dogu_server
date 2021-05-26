@@ -26,7 +26,7 @@
                   </div>
 
                   <li class='drop-down'>
-                      <a href="{{ url('company') }}">
+                      <a href="{{ route('company', session()->get('locale')) }}">
                       {!! __('navbar.Компания') !!}
                       </a>
                   </li>
