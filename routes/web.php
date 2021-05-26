@@ -6,6 +6,7 @@ use App\Http\Controllers\StaticController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\LocaleController;
+use App\Http\Controllers\MailController;
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
@@ -15,9 +16,10 @@ Route::get('/', [LocaleController::class, 'redirect']);
 
 Route::prefix('{locale}')->middleware('set.locale')->group(function () {
     Route::get('/', [StaticController::class, 'home'])->name('home');
-    Route::get('/company', [StaticController::class, 'company']);
-    Route::get('/project', [StaticController::class, 'project']);
-    Route::get('/service', [StaticController::class, 'service']);
+    Route::get('/company', [StaticController::class, 'company'])->name('company');
+    Route::get('/project', [StaticController::class, 'project'])->name('project');
+    Route::get('/service', [StaticController::class, 'service'])->name('service');
+    Route::get('/video', [StaticController::class, 'video'])->name('video');
 
     Route::prefix('/categories')->name('category.')->group(function () {
         Route::get('', [CategoryController::class, 'index'])->name('index');
@@ -28,3 +30,4 @@ Route::prefix('{locale}')->middleware('set.locale')->group(function () {
 });
 
 Route::post('/locale', [LocaleController::class, 'store'])->name('set.locale');
+Route::post('/send-mail/callback', [MailController::class, 'callbackAdded'])->name('mail.post.callback');

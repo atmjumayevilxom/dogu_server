@@ -2,44 +2,41 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-4">
-                <img src="{{asset('http://dogurussia.com/wp-content/uploads/2020/05/logo-icon.png')}}">
+                <img src="{{ asset('images/android-chrome-192x192.png') }}">
             </div>
             <div class="col-sm-4">
-                <p class="title">О компании</p>
+                <p class="title">{!! __('footer.О компании') !!}</p>
                 <ul class="navbar">
-                    <li><a href="{{url('company')}}">О компании</a></li>
-                    <li><a href="{{url('proect')}}">Проекты</a></li>
-                    <li><a href="{{url('servis')}}">Сервис</a></li>
-                    <li><a href="#">Видео</a></li>
-                    <li><a href="#">Программа подбора</a></li>
-                    <li><a href="#">Новости</a></li>
-                    <li><a href="#">Сертификаты</a></li>
+                    <li><a href="{{ route('company', session()->get('locale')) }}">{!! __('footer.О компании') !!}</a></li>
+                    <li><a href="{{ route('project', session()->get('locale')) }}">{!! __('footer.Проекты') !!}</a></li>
+                    <li><a href="{{ route('service', session()->get('locale')) }}">{!! __('footer.Сервис') !!}</a></li>
+                    <li><a href="{{ route('video', session()->get('locale')) }}">{!! __('footer.Видео') !!}</a></li>
                 </ul>
             </div>
             <div class="col-sm-4">
-                <p class="title">Оборудование</p>
+                <p class="title">{!! __('footer.Оборудование') !!}</p>
                 <ul class="navbar">
-                    <li><a href="#">Центральные приточно-вытяжные установки</a></li>
-                    <li><a href="#">Компактные установки с рекуперацией</a></li>
-                    <li><a href="#">Установки для осушения воздуха в бассейнах</a></li>
-                    <li><a href="#">Оборудование для кухни. Фильтрация и очистка воздуха</a></li>
-                    <li><a href="#">Гигиенические установки</a></li>
-                    <li><a href="#">Отопление</a></li>
+                    <li><a href="#">{!! __('footer.Центральные приточно-вытяжные установки') !!}</a></li>
+                    <li><a href="#">{!! __('footer.Компактные установки с рекуперацией') !!}</a></li>
+                    <li><a href="#">{!! __('footer.Установки для осушения воздуха в бассейнах') !!}</a></li>
+                    <li><a href="#">{!! __('footer.Оборудование для кухни. Фильтрация и очистка воздуха') !!}</a></li>
+                    <li><a href="#">{!! __('footer.Гигиенические установки') !!}</a></li>
+                    <li><a href="#">{!! __('footer.Отопление') !!}</a></li>
                 </ul>
             </div>
             <div class="col-sm-4">
-                <p class="title">Сетевые элементы</p>
+                <p class="title">{!! __('footer.Сетевые элементы') !!}</p>
                 <ul class="navbar">
-                    <li><a href="#">Решетки</a></li>
-                    <li><a href="#">Диффузоры</a></li>
-                    <li><a href="#">Клапаны</a></li>
+                    <li><a href="./Projects.html">{!! __('footer.Диффузоры') !!}</a></li>
+                    <li><a href="./Projects.html">{!! __('footer.Клапаны') !!}</a></li>
+                    <li><a href="./Projects.html">{!! __('footer.Решетки') !!}</a></li>
                 </ul>
             </div>
             <div class="col-sm-4">
-                <p class="title">Обратная связь</p>
+                <p class="title">{!! __('footer.Обратная связь') !!}</p>
                 <ul class="navbar">
                     <li><a href="#"><i class="fas fa-phone icon-left"></i> (998) 90 014 70 04</a></li>
-                    <li><a href="#"><i class="fas fa-map-marker-alt icon-left"></i> Адрес</a></li>
+                    <li><a href="#"><i class="fas fa-map-marker-alt icon-left"></i>{!! __('footer.Адрес') !!}</a></li>
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d191884.74398343783!2d69.13928082841667!3d41.28277055677675!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8b0cc379e9c3%3A0xa5a9323b4aa5cb98!2z0KLQvtGI0LrQtdC90YIsIE9gemJla2lzdG9u!5e0!3m2!1suz!2s!4v1618299208274!5m2!1suz!2s"></iframe>
                 </ul>
             </div>
@@ -56,51 +53,49 @@
             <script>
                 document.write(new Date().getFullYear());
             </script>
-            Все права защищены.
+            {!! __('footer.Все права защищены.') !!}
         </div>
     </div>
 </div>
-
 <footer>
     <div class="container">
         <div class="footer-items" style="padding: 50px 0px">
-            <div class="item-1 active">
-                <h4 class="font-00-02">О компании <i class="fa fa-angle-down"></i></h4>
+            <div class="item-1">
+                <h4 class="font-00-02">{!! __('footer.О компании    ') !!} <i class="fa fa-angle-down"></i></h4>
                 <ul class="navbar">
-                    <li><a href="#">Центральные приточно-вытяжные установки</a></li>
-                    <li><a href="#">Компактные установки с рекуперацией</a></li>
-                    <li><a href="#">Установки для осушения воздуха в бассейнах</a></li>
-                    <li><a href="#">Оборудование для кухни. Фильтрация и очистка воздуха</a></li>
-                    <li><a href="#">Гигиенические установки</a></li>
-                    <li><a href="#">Отопление</a></li>
+                    <li><a href="#">{!! __('footer.Центральные приточно-вытяжные установки') !!}</a></li>
+                    <li><a href="#">{!! __('footer.Компактные установки с рекуперацией') !!}</a></li>
+                    <li><a href="#">{!! __('footer.Установки для осушения воздуха в бассейнах') !!}</a></li>
+                    <li><a href="#">{!! __('footer.Оборудование для кухни. Фильтрация и очистка воздуха') !!}</a></li>
+                    <li><a href="#">{!! __('footer.Гигиенические установки') !!}</a></li>
+                    <li><a href="#">{!! __('footer.Отопление') !!}</a></li>
                 </ul>
             </div>
             <div class="item-1 ">
-                <h4 class="font-00-02">Сетевые элементы <i class="fa fa-angle-down"></i></h4>
+                <h4 class="font-00-02">{!! __('footer.Сетевые элементы') !!} <i class="fa fa-angle-down"></i></h4>
                 <ul class="navbar">
-                    <li><a href="#">Решетки</a></li>
-                    <li><a href="#">Диффузоры</a></li>
-                    <li><a href="#">Клапаны</a></li>
+                    <li><a href="#">{!! __('footer.Решетки') !!}</a></li>
+                    <li><a href="#">{!! __('footer.Диффузоры') !!}</a></li>
+                    <li><a href="#">{!! __('footer.Клапаны') !!}</a></li>
                 </ul>
             </div>
             <div class="item-1 ">
-                <h4 class="font-00-02">Обратная связь <i class="fa fa-angle-down"></i></h4>
+                <h4 class="font-00-02">{!! __('footer.Обратная связь') !!} <i class="fa fa-angle-down"></i></h4>
                 <ul class="navbar">
                     <li><a href="#"><i class="fas fa-phone icon-left"></i> (998) 90 014 70 04</a></li>
-                    <li><a href="#"><i class="fas fa-map-marker-alt icon-left"></i> Адрес</a></li>
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d191884.74398343783!2d69.13928082841667!3d41.28277055677675!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8b0cc379e9c3%3A0xa5a9323b4aa5cb98!2z0KLQvtGI0LrQtdC90YIsIE9gemJla2lzdG9u!5e0!3m2!1suz!2s!4v1618299208274!5m2!1suz!2s"></iframe>
+                    <li><a href="#"><i class="fas fa-map-marker-alt icon-left"></i>>{!! __('footer.Адрес') !!}</a></li>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d191884.74398343783!2d69.13928082841667!3d41.28277055677675!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8b0cc379e9c3%3A0xa5a9323b4aa5cb98!2z0KLQvtGI0LrQtdC90YIsIE9gemJla2lzdG9u!5e0!3m2!1suz!2s!4v1618299208274!5m2!1suz!2s"></iframe>
                 </ul>
             </div>
             <div class="item-1 last">
-                <h4 class="font-00-02">Оборудование<i class="fa fa-angle-down "></i></h4>
+                <h4 class="font-00-02">{!! __('footer.Оборудование') !!}<i class="fa fa-angle-down "></i></h4>
                 <ul class="navbar">
-                    <li><a href="#">Центральные приточно-вытяжные установки</a></li>
-                    <li><a href="#">Компактные установки с рекуперацией</a></li>
-                    <li><a href="#">Установки для осушения воздуха в бассейнах</a></li>
-                    <li><a href="#">Оборудование для кухни. Фильтрация и очистка воздуха</a></li>
-                    <li><a href="#">Гигиенические установки</a></li>
-                    <li><a href="#">Отопление</a></li>
+                    <li><a href="#">{!! __('footer.Центральные приточно-вытяжные установки') !!}</a></li>
+                    <li><a href="#">{!! __('footer.Компактные установки с рекуперацией') !!}</a></li>
+                    <li><a href="#">{!! __('footer.Установки для осушения воздуха в бассейнах') !!}</a></li>
+                    <li><a href="#">{!! __('footer.Оборудование для кухни. Фильтрация и очистка воздуха') !!}</a></li>
+                    <li><a href="#">{!! __('footer.Гигиенические установки') !!}</a></li>
+                    <li><a href="#">{!! __('footer.Отопление') !!}</a></li>
                 </ul>
             </div>
         </div>
@@ -123,23 +118,37 @@
         <div class="modal-content">
             <span class="close">&times;</span>
             <div class="card">
-                <p class="call-title">Мы можем вам перезвонить, если захотите!</p>
-                <p class="call-text"> Введите свой номер телефона и мы с вами свяжемся.</p>
-                <form action="">
-                    <input type="text" placeholder="Ваше имя и фамилия" required>
-                    <input type="text" placeholder="+ (998)" required>
+                <p class="call-title">{!! __('footer.Мы можем вам перезвонить, если захотите!') !!}</p>
+                <p class="call-text">{!! __('footer.Введите свой номер телефона и мы с вами свяжемся.') !!}</p>
+                <form action="sendhtmlemail" method="GET">
+                    <input type="text" name="name" placeholder="{!! __('footer.Ваше имя и фамилия') !!}" required>
+                    <input type="text" name="number" placeholder="+ (998)" required>
                     <button class="svg-wrapper">
                         <svg height="60" width="320" xmlns="http://www.w3.org/2000/svg">
                             <rect class="shape" height="60" width="320" />
-                            <div class="text">попросить позвонить</div>
+                            <div class="text">{!! __('footer.попросить позвонить') !!}</div>
                         </svg>
                     </button>
                 </form>
+                {{-- Mail form ends --}}
+
             </div>
         </div>
 
     </div>
 </div>
+
+<div class="footer-bottom-scroll">
+    <ol>
+        <li>
+            <a href="https://t.me/doguuzbekistan" "><i class=" fab fa-telegram-plane scroll-icon "></i></a></li>
+        <li><a href="tel:+99893 042 90 90 "><i class="fa fa-phone scroll-icon "></i></a></li>
+        <li><a href="mailto: ibrokhim@doguhvac.com "><i class="fas fa-envelope scroll-icon "></i></a></li>
+    </ol>
+</div>
+{{-- @if(session()->has('message'))
+    <div><img src="{{ session()->get('message') }}"></div>
+@endif --}}
 <script>
     [...document.querySelectorAll('.item-1')].map(item => {
         item.addEventListener('click', event => {
@@ -193,10 +202,12 @@
 
 <!-- JavaScripts
 ============================================= -->
+<script src="{{asset('js/preload.js')}}"></script>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <script src="{{asset('js/home-page.js')}}"></script>
 <script src="{{asset('js/jquery.js')}}"></script>
 <script src="{{asset('js/plugins.min.js')}}"></script>
-<script src="{{asset('./js/home-page.js')}}"></script>
-<script src="{{asset('./js/scroll.js')}}"></script>
+<script src="{{asset('js/home-page.js')}}"></script>
+<script src="{{asset('js/scroll.js')}}"></script>
 <!-- Footer Scripts
 ============================================= -->

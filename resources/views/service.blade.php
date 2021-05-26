@@ -1,28 +1,23 @@
 @extends('layouts.master')
 
 @section('meta')
-<link rel="stylesheet" href="css/Service.css">
+<link rel="stylesheet" href="{{asset('css/Service.css')}}">
 <title>Servis</title>
 
 @stop
 @section('content')
 
-<header>
-    <div class="header__in">
-        <div class="header__title">
-            Дышите вместе с <span class="caption">DOGU!</span>
-        </div>
-        <div class="header__back"></div>
-    </div>
-</header>
 
 
 <!-- Document Wrapper
 ============================================= -->
 <main>
     <div class="container">
-        <p>Наша сервисная служба состоит из 9 сервисных инженеров, которые 24 часа в сутки готовы помочь нашим клиентам. При покупке нашего оборудования и заключении с нами договора на сервисное обслуживание, наши клиенты получают до 5 лет гарантии.
-            Все необходимые запчасти находятся на складе в наличии.</p>
+        <p>{!! __('service.Наша сервисная служба состоит из 9 сервисных инженеров, которые 24 часа в сутки готовы помочь нашим
+клиентам.
+
+При покупке нашего оборудования и заключении с нами договора на сервисное обслуживание, наши клиенты
+получают до 5 лет гарантии.') !!}</p>
         <div class="card">
             <div class="card-img">
                 <img src="{{asset('./images/1_11.jpg')}}" alt="">

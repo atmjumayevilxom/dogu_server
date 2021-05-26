@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Http\Request;
 use App\Models\Category;
 
 class CategoryController extends Controller
@@ -12,9 +13,10 @@ class CategoryController extends Controller
         return view('categories', compact('categories'));
     }
 
-    public function show($id)
+    public function show(Request $request)
     {
-        $category = Category::find($id);
+        $category = Category::find($request->id);
         return view('category-detail', compact('category'));
     }
 }
+ 
