@@ -17,42 +17,42 @@
                 <div class="header__back"></div>
                 <img src="{{ asset('images/slider/dogu-company.jpg') }}" alt="dogu">
                 <div class="header__title">
-                    Дышите вместе с <span class="caption">DOGU!</span>
+                {!! __('home.Дышите вместе с') !!} <span class="caption">DOGU!</span>
                 </div>
             </div>
             <div class="swiper-slide swiper-backslide">
                 <div class="header__back"></div>
                 <img src="{{ asset('images/slider/1.jpg') }}" alt="dogu">
                 <div class="header__title">
-                    Дышите вместе с <span class="caption">DOGU!</span>
+                {!! __('home.Дышите вместе с') !!} <span class="caption">DOGU!</span>
                 </div>
             </div>
             <div class="swiper-slide swiper-backslide">
                 <div class="header__back"></div>
                 <img src="{{ asset('images/slider/2.jpg') }}" alt="dogu">
                 <div class="header__title">
-                    Дышите вместе с <span class="caption">DOGU!</span>
+                {!! __('home.Дышите вместе с') !!} <span class="caption">DOGU!</span>
                 </div>
             </div>
             <div class="swiper-slide swiper-backslide">
                 <div class="header__back"></div>
                 <img src="{{ asset('images/slider/3.jpg') }}" alt="dogu">
                 <div class="header__title">
-                    Дышите вместе с <span class="caption">DOGU!</span>
+                {!! __('home.Дышите вместе с') !!} <span class="caption">DOGU!</span>
                 </div>
             </div>
             <div class="swiper-slide swiper-backslide">
                 <div class="header__back"></div>
                 <img src="{{ asset('images/slider/4.jpg') }}" alt="dogu">
                 <div class="header__title">
-                    Дышите вместе с <span class="caption">DOGU!</span>
+                {!! __('home.Дышите вместе с') !!} <span class="caption">DOGU!</span>
                 </div>
             </div>
             <div class="swiper-slide swiper-backslide">
                 <div class="header__back"></div>
                 <img src="{{ asset('images/slider/5.jpg') }}" alt="dogu">
                 <div class="header__title">
-                    Дышите вместе с <span class="caption">DOGU!</span>
+                {!! __('home.Дышите вместе с') !!} <span class="caption">DOGU!</span>
                 </div>
             </div>
         </div>
@@ -72,18 +72,13 @@
                         <img src="{{asset('./images/four-season.png')}}" alt="JPG">
                     </div>
                     <div class="dev-section__text dev">
-                        <div class="dev__title">Отдел <br>разработок</div>
-                        <div class="dev__about">Компания DOGU имеет большое преимущество перед остальными участниками
-                            отрасли,
-                            потому что придает большое значение собственному отделу исследований и разработок.
+                        <div class="dev__title">{!! __('home.Отдел <br>разработок</div>') !!}
+                        <div class="dev__about">{!! __('home.Компания DOGU имеет большое преимущество перед остальными участниками отрасли, потому что придает большое значение собственному отделу исследований и разработок.') !!}
                         </div><br>
                         <div class="dev__about">
-                            На территории завода имеется три лаборатории, в которых мы проводим свои исследования и
-                            находим
-                            новые наиболее энергоэффективные решения для наших клиентов.
+                        {!! __('home.На территории завода имеется три лаборатории, в которых мы проводим свои исследования и находим новые наиболее энергоэффективные решения для наших клиентов.') !!}
                         </div>
-                        <div class="dev__comment">Самая важная миссия компании – движение вперед вместе с нашими
-                            клиентами
+                        <div class="dev__comment">{!! __('home.Самая важная миссия компании – движение вперед вместе с нашими клиентами') !!}
                         </div>
                     </div>
                 </div>
@@ -97,14 +92,17 @@
                     </div>
                     <div class="catalog-product__text product">
                         <div class="product__title">
-                            Мир дышит воздухом вместе с <span class="caption">DOGU</span>
+                        {!! __('home.Мир дышит воздухом вместе с') !!} <span class="caption">DOGU</span> 
+                            
                         </div>
                         <div class="product__about">
-                            DOGU производит более 130 различных продуктов различных линеек
+                        {!! __('home.DOGU производит более 130 различных продуктов различных линеек') !!}
+                            
                         </div>
                         <div class="product__btn">
                             <a href="">
-                                Полный каталог продукции <i class="fa fa-angle-double-right"
+                                {!! __('home.Полный каталог продукции') !!}
+                                 <i class="fa fa-angle-double-right"
                                     style=" color: white; font-size: 14px;"></i>
                             </a>
                         </div>
@@ -114,7 +112,7 @@
         </div>
     </main>
     <section class="ag-slide-block">
-        <p class="swiper_project">Наши реализованные проекты</p>
+        <p class="swiper_project">{!! __('home.Наши реализованные проекты') !!}</p>
 
         <div class="swiper-container">
             <ul class="swiper-wrapper ag-slide_list">

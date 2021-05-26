@@ -27,12 +27,12 @@
 
                   <li class='drop-down'>
                       <a href="{{ url('company') }}">
-                          Компания
+                      {!! __('navbar.Компания') !!}
                       </a>
                   </li>
                   <li class='drop-down'>
                       <a href="{{ route('category.index', session()->get('locale')) }}">
-                          ОБОРУДОВАНИЕ
+                      {!! __('navbar.ОБОРУДОВАНИЕ') !!}
                           <i class="fas fa-angle-right"></i>
                       </a>
                       <ul>
@@ -58,7 +58,7 @@
                   </li>
                   <li class='drop-down'>
                       <a href='./categories'>
-                          Сетевые элементы
+                      {!! __('navbar.ОБОРУДОВАНИЕСетевые элементы') !!}
                           <i class="fas fa-angle-right"></i>
                       </a>
                       <ul>
@@ -107,24 +107,24 @@
                     <div class="overlay-content">
                         <div class="footer-items" style="padding: 50px 0px">
                             <div class="item-1">
-                                <h4 class="font-00-02"><a href="./company.html">О компании</a></h4>
-                                <h4 class="font-00-02"><a href="./categories.html">ОБОРУДОВАНИЕ</a><i class="fa fa-angle-down"></i></h4>
+                                <h4 class="font-00-02"><a href="./company.html">{!! __('navbar.О компании') !!}</a></h4>
+                                <h4 class="font-00-02"><a href="./categories.html">{!! __('navbar.ОБОРУДОВАНИЕ') !!}</a><i class="fa fa-angle-down"></i></h4>
                                 <ul class="navbar">
-                                    <li><a href="./card.html"> Центральные приточно-вытяжные установки</a></li>
-                                    <li><a href="./card.html"> Компактные установки с рекуперацией</a></li>
-                                    <li><a href="./card.html">Установки для осушения воздуха в бассейне</a></li>
-                                    <li><a href="./card.html">Оборудование для кухни</a></li>
-                                    <li><a href="./card.html">Гигиенические установки</a></li>
-                                    <li><a href="./card.html"> Воздушное отопление</a></li>
-                                    <li><a href="./card.html"> Rooftop</a></li>
+                                    <li><a href="./card.html">{!! __('navbar.Центральные приточно-вытяжные установки') !!}</a></li>
+                                    <li><a href="./card.html"> {!! __('navbar.Компактные установки с рекуперацией') !!}</a></li>
+                                    <li><a href="./card.html">{!! __('navbar.Установки для осушения воздуха в бассейне') !!}</a></li>
+                                    <li><a href="./card.html">{!! __('navbar.Оборудование для кухни') !!}</a></li>
+                                    <li><a href="./card.html">{!! __('navbar.Гигиенические установки') !!}</a></li>
+                                    <li><a href="./card.html"> {!! __('navbar.Воздушное отопление') !!}</a></li>
+                                    <li><a href="./card.html"> {!! __('navbar.Rooftop') !!}</a></li>
                                 </ul>
                             </div>
                             <div class="item-1 ">
-                                <h4 class="font-00-02"><a href="./categories.html">Сетевые элементы</a> <i class="fa fa-angle-down"></i></h4>
+                                <h4 class="font-00-02"><a href="./categories.html">{!! __('navbar. ') !!}Сетевые элементы</a> <i class="fa fa-angle-down"></i></h4>
                                 <ul class="navbar">
-                                    <li><a href="./Projects.html">Решетки</a></li>
-                                    <li><a href="./Projects.html">Диффузоры</a></li>
-                                    <li><a href="./Projects.html">Клапаны</a></li>
+                                    <li><a href="./Projects.html">{!! __('navbar.Решетки') !!}</a></li>
+                                    <li><a href="./Projects.html">{!! __('navbar.Диффузоры') !!}</a></li>
+                                    <li><a href="./Projects.html">{!! __('navbar.Клапаны') !!}</a></li>
                                 </ul>
                             </div>
 
