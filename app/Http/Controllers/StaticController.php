@@ -23,4 +23,8 @@ class StaticController extends Controller
     {
         return view('service');
     }
+    public function video()
+    {
+        return view('video');
+    }
 }

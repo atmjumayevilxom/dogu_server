@@ -21,11 +21,11 @@
     overflow: hidden;
     margin-top: 10px;
 }
-.card > a:hover{
+.card a span:hover{
     color: #FFFFFF;
     background-color:#06b6fc;
 }
-.card > a{
+.card a span{
     display: block;
     background-color: #eee;
     margin-top: 10px;

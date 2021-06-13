@@ -1,13 +1,15 @@
 .call {
-  font-family: inter !important;
-  z-index: 99999999 !important;
-  right: 1em;
-  bottom: 7em;
-  color: #FAFAFA;
-  padding: 5px;
-  position: fixed !important;
-  /* Modal Content */ }
-  .call .button {
+    font-family: inter !important;
+    z-index: 99999999 !important;
+    right: 5em;
+    bottom: 6em;
+    color: #FAFAFA;
+    padding: 5px;
+    position: fixed !important;
+    /* Modal Content */
+}
+
+.call .button {
     border: 5px solid #aaa9a9;
     border-radius: 50px;
     padding: 15px;
@@ -15,23 +17,52 @@
     outline: none;
     box-shadow: 0px 0px 1px 5px #0000001a;
     opacity: .7;
-    transition: .5s; }
-    .call .button:hover {
-      opacity: 1;
-      transition: .5s;
-      transform: scale(1.1); }
-    .call .button img {
-      width: 40px; }
-    .call .button .fa-headset {
-      font-size: 50px; }
-  .call .pulse {
-    animation: pulse-animation 2s infinite; }
+    transition: .5s;
+}
+.call button .fa-phone{
+    font-size: 25px;
+    animation: animate 1s infinite;
+    /*transform: rotate(110deg);*/
+}
+
+
+@keyframes animate {
+   0%{
+       transform: rotate(-10deg)
+   }
+    100%{
+        transform: rotate(10deg)
+    }
+}
+
+.call .button:hover {
+    opacity: 1;
+    transition: .5s;
+    transform: scale(1.1);
+}
+
+.call .button img {
+    width: 40px;
+}
+
+.call .button .fa-headset {
+    font-size: 50px;
+}
+
+.call .pulse {
+    animation: pulse-animation 2s infinite;
+}
+
 @keyframes pulse-animation {
-  0% {
-    box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.7); }
-  100% {
-    box-shadow: 0 0 0 20px rgba(0, 0, 0, 0); } }
-  .call .modal {
+    0% {
+        box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.7);
+    }
+    100% {
+        box-shadow: 0 0 0 20px rgba(0, 0, 0, 0);
+    }
+}
+
+.call .modal {
     display: none;
     /* Hidden by default */
     position: fixed;
@@ -51,937 +82,1327 @@
     background-color: black;
     /* Fallback color */
     background-color: rgba(0, 0, 0, 0.7);
-    /* Black w/ opacity */ }
-  .call .modal-content {
+    /* Black w/ opacity */
+}
+
+.call .modal-content {
     font-family: inter !important;
     border: none;
     background-size: cover;
     margin: auto;
     padding: 0px;
     width: 60%;
-    /* The Close Button */ }
-    .call .modal-content .card {
-      background: rgba(0, 0, 0, 0.8);
-      width: 100%;
-      height: 60vh; }
-      .call .modal-content .card .call-title {
-        font-size: 35px;
-        text-align: center;
-        padding-top: 20px; }
-      .call .modal-content .card .call-text {
-        font-size: 20px;
-        text-align: center;
-        padding-top: 15px; }
-      .call .modal-content .card form {
-        display: block;
-        width: 250px;
-        margin: 0 auto; }
-        .call .modal-content .card form input {
-          width: 100%;
-          display: block;
-          margin: 50px auto;
-          border: none;
-          border-bottom: 1px solid white;
-          outline: none;
-          background: transparent;
-          color: white;
-          font-size: 18px; }
-          .call .modal-content .card form input::placeholder {
-            color: white;
-            padding-left: 0px;
-            font-size: 18px; }
-        .call .modal-content .card form button {
-          margin: 20px auto;
-          display: block;
-          text-align: center;
-          border: none;
-          outline: none;
-          width: 250px;
-          transition: .5s;
-          background: black; }
-        .call .modal-content .card form .svg-wrapper {
-          position: relative;
-          top: 50%;
-          transform: translateY(-50%);
-          margin: 0 auto;
-          height: 0; }
-        .call .modal-content .card form .shape {
-          stroke-dasharray: 500 500 500 500;
-          stroke-dashoffset: 250;
-          stroke-width: 3px;
-          fill: transparent;
-          width: 250px;
-          stroke: #06b6fc;
-          border-bottom: 10px solid black;
-          background: #06b6fc;
-          transition: stroke-width 1s, stroke-dashoffset 1s, stroke-dasharray 1s; }
-        .call .modal-content .card form .text {
-          font-family: 'Roboto Condensed';
-          font-size: 17px;
-          line-height: 20px;
-          letter-spacing: 2px;
-          color: #fff;
-          top: -48px;
-          position: relative;
-          font-family: inter !important; }
-        .call .modal-content .card form .svg-wrapper:hover .shape {
-          stroke-width: 3px;
-          stroke-dashoffset: 0;
-          stroke-dasharray: 760; }
-    .call .modal-content .close {
-      color: #aaaaaa;
-      float: right;
-      font-size: 35px;
-      font-weight: bold;
-      margin-right: 25px;
-      margin-top: 20px; }
-    .call .modal-content .close:hover,
-    .call .modal-content .close:focus {
-      color: #06b6fc;
-      text-decoration: none;
-      cursor: pointer; }
+    /* The Close Button */
+}
+
+.call .modal-content .card {
+    background: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    height: 60vh;
+}
+
+.call .modal-content .card .call-title {
+    font-size: 35px;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.call .modal-content .card .call-text {
+    font-size: 20px;
+    text-align: center;
+    padding-top: 15px;
+}
+
+.call .modal-content .card form {
+    display: block;
+    width: 250px;
+    margin: 0 auto;
+}
+
+.call .modal-content .card form input {
+    width: 100%;
+    display: block;
+    margin: 50px auto;
+    border: none;
+    border-bottom: 1px solid white;
+    outline: none;
+    background: transparent;
+    color: white;
+    font-size: 18px;
+}
+
+.call .modal-content .card form input::placeholder {
+    color: white;
+    padding-left: 0px;
+    font-size: 18px;
+}
+
+.call .modal-content .card form button {
+    margin: 20px auto;
+    display: block;
+    text-align: center;
+    border: none;
+    outline: none;
+    width: 250px;
+    transition: .5s;
+    background: black;
+}
+
+.call .modal-content .card form .svg-wrapper {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 0 auto;
+    height: 0;
+}
+
+.call .modal-content .card form .shape {
+    stroke-dasharray: 500 500 500 500;
+    stroke-dashoffset: 250;
+    stroke-width: 3px;
+    fill: transparent;
+    width: 250px;
+    stroke: #06b6fc;
+    border-bottom: 10px solid black;
+    background: #06b6fc;
+    transition: stroke-width 1s, stroke-dashoffset 1s, stroke-dasharray 1s;
+}
+
+.call .modal-content .card form .text {
+    font-family: 'Roboto Condensed';
+    font-size: 17px;
+    line-height: 20px;
+    letter-spacing: 2px;
+    color: #fff;
+    top: -48px;
+    position: relative;
+    font-family: inter !important;
+}
+
+.call .modal-content .card form .svg-wrapper:hover .shape {
+    stroke-width: 3px;
+    stroke-dashoffset: 0;
+    stroke-dasharray: 760;
+}
+
+.call .modal-content .close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 35px;
+    font-weight: bold;
+    margin-right: 25px;
+    margin-top: 20px;
+}
+
+.call .modal-content .close:hover,
+.call .modal-content .close:focus {
+    color: #06b6fc;
+    text-decoration: none;
+    cursor: pointer;
+}
 
 .go-top {
-  z-index: 99999999999999;
-  right: 1.5em;
-  bottom: 1em;
-  text-decoration: none;
-  position: fixed !important;
-  outline: none;
-  padding: 10px;
-  padding-top: 0;
-  background: transparent;
-  border: none;
-  border: 3px solid #06b6fc;
-  border-radius: 50%; 
-  width: 50px;
-  height: 50px;
+    z-index: 99999999999999;
+    right: 1.5em;
+    bottom: 0em;
+    text-decoration: none;
+    position: fixed !important;
+    outline: none;
+    padding: 10px;
+    padding-top: 0;
+    background: transparent;
+    border: none;
+    border: 3px solid #06b6fc;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
 }
-  .go-top .fa-angle-up {
+
+.go-top .fa-angle-up {
     font-size: 40px;
-    color: #06b6fc;}
+    color: #06b6fc;
+}
+
+.footer-bottom-scroll{
+    display: none;
+}
+.footer-bottom-scroll {
+display: none;
+ }
+
+
 
 @media (max-width: 1400px) {
-  .call {
-    /* Modal Content */ }
-    .call .modal {
-      padding-top: 100px;
-      /* Location of the box */ }
-    .call .modal-content {
-      /* The Close Button */ }
-      .call .modal-content .card .call-title {
-        font-size: 30px;
-        padding-top: 60px;
-        max-width: 90%;
-        margin: 0px auto;
-        display: block; }
-      .call .modal-content .card .call-text {
-        font-size: 20px;
-        padding-top: 15px;
-        max-width: 85%;
-        margin: 0px auto;
-        display: block; }
-      .call .modal-content .card form {
-        display: block;
-        width: 230px;
-        margin: 0 auto; }
-        .call .modal-content .card form input {
-          width: 100%;
-          display: block;
-          margin: 30px auto;
-          border: none;
-          border-bottom: 1px solid white;
-          outline: none;
-          background: transparent;
-          color: white;
-          font-size: 18px; }
-          .call .modal-content .card form input::placeholder {
-            color: white;
-            padding-left: 0px;
-            font-size: 18px; }
-        .call .modal-content .card form button {
-          margin: 20px auto;
-          display: block;
-          text-align: center;
-          border: none;
-          outline: none;
-          width: 250px;
-          transition: .5s;
-          background: black; }
-        .call .modal-content .card form .svg-wrapper {
-          position: relative;
-          top: 50%;
-          transform: translateY(-50%);
-          margin: 0 auto;
-          height: 0; }
-        .call .modal-content .card form .shape {
-          stroke-dasharray: 500 500 500 500;
-          stroke-dashoffset: 250;
-          stroke-width: 3px;
-          fill: transparent;
-          width: 250px;
-          stroke: #06b6fc;
-          border-bottom: 10px solid black;
-          background: #06b6fc;
-          transition: stroke-width 1s, stroke-dashoffset 1s, stroke-dasharray 1s; }
-        .call .modal-content .card form .text {
-          font-family: 'Roboto Condensed';
-          font-size: 18px;
-          line-height: 20px;
-          letter-spacing: 2px;
-          color: #fff;
-          top: -48px;
-          position: relative; }
-        .call .modal-content .card form .svg-wrapper:hover .shape {
-          stroke-width: 3px;
-          stroke-dashoffset: 0;
-          stroke-dasharray: 760; }
-      .call .modal-content .close {
-        color: #aaaaaa;
-        float: right;
-        font-size: 35px;
-        font-weight: bold;
-        margin-right: 25px;
-        margin-top: 20px; }
-      .call .modal-content .close:hover,
-      .call .modal-content .close:focus {
-        color: #06b6fc;
-        text-decoration: none;
-        cursor: pointer; } }
-@media (max-width: 1200px) {
-  .call {
-    /* Modal Content */ }
-    .call .modal {
-      padding-top: 100px;
-      /* Location of the box */ }
-    .call .modal-content {
-      /* The Close Button */ }
-      .call .modal-content .card .call-title {
-        font-size: 30px;
-        padding-top: 60px;
-        max-width: 90%;
-        margin: 0px auto;
-        display: block; }
-      .call .modal-content .card .call-text {
-        font-size: 20px;
-        padding-top: 15px;
-        max-width: 85%;
-        margin: 0px auto;
-        display: block; }
-      .call .modal-content .card form {
-        display: block;
-        width: 230px;
-        margin: 0 auto; }
-        .call .modal-content .card form input {
-          width: 100%;
-          display: block;
-          margin: 30px auto;
-          border: none;
-          border-bottom: 1px solid white;
-          outline: none;
-          background: transparent;
-          color: white;
-          font-size: 18px; }
-          .call .modal-content .card form input::placeholder {
-            color: white;
-            padding-left: 0px;
-            font-size: 18px; }
-        .call .modal-content .card form button {
-          margin: 20px auto;
-          display: block;
-          text-align: center;
-          border: none;
-          outline: none;
-          width: 250px;
-          transition: .5s;
-          background: black; }
-        .call .modal-content .card form .svg-wrapper {
-          position: relative;
-          top: 50%;
-          transform: translateY(-50%);
-          margin: 0 auto;
-          height: 0; }
-        .call .modal-content .card form .shape {
-          stroke-dasharray: 500 500 500 500;
-          stroke-dashoffset: 250;
-          stroke-width: 3px;
-          fill: transparent;
-          width: 250px;
-          stroke: #06b6fc;
-          border-bottom: 10px solid black;
-          background: #06b6fc;
-          transition: stroke-width 1s, stroke-dashoffset 1s, stroke-dasharray 1s; }
-        .call .modal-content .card form .text {
-          font-family: 'Roboto Condensed';
-          font-size: 18px;
-          line-height: 20px;
-          letter-spacing: 2px;
-          color: #fff;
-          top: -48px;
-          position: relative; }
-        .call .modal-content .card form .svg-wrapper:hover .shape {
-          stroke-width: 3px;
-          stroke-dashoffset: 0;
-          stroke-dasharray: 760; }
-      .call .modal-content .close {
-        color: #aaaaaa;
-        float: right;
-        font-size: 35px;
-        font-weight: bold;
-        margin-right: 25px;
-        margin-top: 20px; }
-      .call .modal-content .close:hover,
-      .call .modal-content .close:focus {
-        color: #06b6fc;
-        text-decoration: none;
-        cursor: pointer; } }
-@media (max-width: 1000px) {
-  .call {
-    /* Modal Content */ }
-    .call .modal {
-      padding-top: 100px;
-      /* Location of the box */ }
-    .call .modal-content {
-      /* The Close Button */ }
-      .call .modal-content .card .call-title {
-        font-size: 30px;
-        padding-top: 60px;
-        max-width: 90%;
-        margin: 0px auto;
-        display: block; }
-      .call .modal-content .card .call-text {
-        font-size: 20px;
-        padding-top: 15px;
-        max-width: 85%;
-        margin: 0px auto;
-        display: block; }
-      .call .modal-content .card form {
-        display: block;
-        width: 230px;
-        margin: 0 auto; }
-        .call .modal-content .card form input {
-          width: 100%;
-          display: block;
-          margin: 30px auto;
-          border: none;
-          border-bottom: 1px solid white;
-          outline: none;
-          background: transparent;
-          color: white;
-          font-size: 18px; }
-          .call .modal-content .card form input::placeholder {
-            color: white;
-            padding-left: 0px;
-            font-size: 18px; }
-        .call .modal-content .card form button {
-          margin: 20px auto;
-          display: block;
-          text-align: center;
-          border: none;
-          outline: none;
-          width: 250px;
-          transition: .5s;
-          background: black; }
-        .call .modal-content .card form .svg-wrapper {
-          position: relative;
-          top: 50%;
-          transform: translateY(-50%);
-          margin: 0 auto;
-          height: 0; }
-        .call .modal-content .card form .shape {
-          stroke-dasharray: 500 500 500 500;
-          stroke-dashoffset: 250;
-          stroke-width: 3px;
-          fill: transparent;
-          width: 250px;
-          stroke: #06b6fc;
-          border-bottom: 10px solid black;
-          background: #06b6fc;
-          transition: stroke-width 1s, stroke-dashoffset 1s, stroke-dasharray 1s; }
-        .call .modal-content .card form .text {
-          font-family: 'Roboto Condensed';
-          font-size: 18px;
-          line-height: 20px;
-          letter-spacing: 2px;
-          color: #fff;
-          top: -48px;
-          position: relative; }
-        .call .modal-content .card form .svg-wrapper:hover .shape {
-          stroke-width: 3px;
-          stroke-dashoffset: 0;
-          stroke-dasharray: 760; }
-      .call .modal-content .close {
-        color: #aaaaaa;
-        float: right;
-        font-size: 35px;
-        font-weight: bold;
-        margin-right: 25px;
-        margin-top: 20px; }
-      .call .modal-content .close:hover,
-      .call .modal-content .close:focus {
-        color: #06b6fc;
-        text-decoration: none;
-        cursor: pointer; }
 
-  .go-top img {
-    width: 100px; } }
-@media (max-width: 800px) {
-  .call {
-    /* Modal Content */ }
     .call .modal {
-      padding-top: 100px;
-      /* Location of the box */ }
+        padding-top: 100px;
+        /* Location of the box */
+    }
+
+
+
+    .call .modal-content .card .call-title {
+        font-size: 30px;
+        padding-top: 60px;
+        max-width: 90%;
+        margin: 0px auto;
+        display: block;
+    }
+
+    .call .modal-content .card .call-text {
+        font-size: 20px;
+        padding-top: 15px;
+        max-width: 85%;
+        margin: 0px auto;
+        display: block;
+    }
+
+    .call .modal-content .card form {
+        display: block;
+        width: 230px;
+        margin: 0 auto;
+    }
+
+    .call .modal-content .card form input {
+        width: 100%;
+        display: block;
+        margin: 30px auto;
+        border: none;
+        border-bottom: 1px solid white;
+        outline: none;
+        background: transparent;
+        color: white;
+        font-size: 18px;
+    }
+
+    .call .modal-content .card form input::placeholder {
+        color: white;
+        padding-left: 0px;
+        font-size: 18px;
+    }
+
+    .call .modal-content .card form button {
+        margin: 20px auto;
+        display: block;
+        text-align: center;
+        border: none;
+        outline: none;
+        width: 250px;
+        transition: .5s;
+        background: black;
+    }
+
+    .call .modal-content .card form .svg-wrapper {
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+        margin: 0 auto;
+        height: 0;
+    }
+
+    .call .modal-content .card form .shape {
+        stroke-dasharray: 500 500 500 500;
+        stroke-dashoffset: 250;
+        stroke-width: 3px;
+        fill: transparent;
+        width: 250px;
+        stroke: #06b6fc;
+        border-bottom: 10px solid black;
+        background: #06b6fc;
+        transition: stroke-width 1s, stroke-dashoffset 1s, stroke-dasharray 1s;
+    }
+
+    .call .modal-content .card form .text {
+        font-family: 'Roboto Condensed';
+        font-size: 18px;
+        line-height: 20px;
+        letter-spacing: 2px;
+        color: #fff;
+        top: -48px;
+        position: relative;
+    }
+
+    .call .modal-content .card form .svg-wrapper:hover .shape {
+        stroke-width: 3px;
+        stroke-dashoffset: 0;
+        stroke-dasharray: 760;
+    }
+
+    .call .modal-content .close {
+        color: #aaaaaa;
+        float: right;
+        font-size: 35px;
+        font-weight: bold;
+        margin-right: 25px;
+        margin-top: 20px;
+    }
+
+    .call .modal-content .close:hover,
+    .call .modal-content .close:focus {
+        color: #06b6fc;
+        text-decoration: none;
+        cursor: pointer;
+    }
+}
+
+@media (max-width: 1200px) {
+ 
+
+    .call .modal {
+        padding-top: 100px;
+        /* Location of the box */
+    }
+
+
+
+    .call .modal-content .card .call-title {
+        font-size: 30px;
+        padding-top: 60px;
+        max-width: 90%;
+        margin: 0px auto;
+        display: block;
+    }
+
+    .call .modal-content .card .call-text {
+        font-size: 20px;
+        padding-top: 15px;
+        max-width: 85%;
+        margin: 0px auto;
+        display: block;
+    }
+
+    .call .modal-content .card form {
+        display: block;
+        width: 230px;
+        margin: 0 auto;
+    }
+
+    .call .modal-content .card form input {
+        width: 100%;
+        display: block;
+        margin: 30px auto;
+        border: none;
+        border-bottom: 1px solid white;
+        outline: none;
+        background: transparent;
+        color: white;
+        font-size: 18px;
+    }
+
+    .call .modal-content .card form input::placeholder {
+        color: white;
+        padding-left: 0px;
+        font-size: 18px;
+    }
+
+    .call .modal-content .card form button {
+        margin: 20px auto;
+        display: block;
+        text-align: center;
+        border: none;
+        outline: none;
+        width: 250px;
+        transition: .5s;
+        background: black;
+    }
+
+    .call .modal-content .card form .svg-wrapper {
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+        margin: 0 auto;
+        height: 0;
+    }
+
+    .call .modal-content .card form .shape {
+        stroke-dasharray: 500 500 500 500;
+        stroke-dashoffset: 250;
+        stroke-width: 3px;
+        fill: transparent;
+        width: 250px;
+        stroke: #06b6fc;
+        border-bottom: 10px solid black;
+        background: #06b6fc;
+        transition: stroke-width 1s, stroke-dashoffset 1s, stroke-dasharray 1s;
+    }
+
+    .call .modal-content .card form .text {
+        font-family: 'Roboto Condensed';
+        font-size: 18px;
+        line-height: 20px;
+        letter-spacing: 2px;
+        color: #fff;
+        top: -48px;
+        position: relative;
+    }
+
+    .call .modal-content .card form .svg-wrapper:hover .shape {
+        stroke-width: 3px;
+        stroke-dashoffset: 0;
+        stroke-dasharray: 760;
+    }
+
+    .call .modal-content .close {
+        color: #aaaaaa;
+        float: right;
+        font-size: 35px;
+        font-weight: bold;
+        margin-right: 25px;
+        margin-top: 20px;
+    }
+
+    .call .modal-content .close:hover,
+    .call .modal-content .close:focus {
+        color: #06b6fc;
+        text-decoration: none;
+        cursor: pointer;
+    }
+}
+
+@media (max-width: 1000px) {
+    .footer-bottom-scroll {
+        display: block;
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background: #06b6fc;
+        color: white;
+        z-index: 999999999999999999999;
+        text-align: center;
+        padding: 10px 0 15px 0;
+     }
+      .footer-bottom-scroll ol {
+        width: 100%;
+        background: #06b6fc;
+        /* height: 70px !important; */
+        /* overflow: hidden; */
+        text-align: center;
+        /* z-index: 99999999999999999999999999; */
+      }
+      .footer-bottom-scroll ol li {
+        display: inline-block;
+        padding: 15px;
+        padding-right: 50px;
+      }
+      .footer-bottom-scroll ol li:nth-child(3){
+          padding-right: 0;
+      }
+      .scroll-icon {
+        font-size: 30px;
+        color: #fafafa;
+      }
+
+      .call {
+        font-family: inter !important;
+        z-index: 99999999 !important;
+        right: 1em;
+        bottom: 10em;
+        color: #FAFAFA;
+        padding: 5px;
+        position: fixed !important;
+        /* Modal Content */
+    } 
+    .call .modal {
+        padding-top: 100px;
+        /* Location of the box */
+    }
+
+
+
+    .call .modal-content .card .call-title {
+        font-size: 30px;
+        padding-top: 60px;
+        max-width: 90%;
+        margin: 0px auto;
+        display: block;
+    }
+
+    .call .modal-content .card .call-text {
+        font-size: 20px;
+        padding-top: 15px;
+        max-width: 85%;
+        margin: 0px auto;
+        display: block;
+    }
+
+    .call .modal-content .card form {
+        display: block;
+        width: 230px;
+        margin: 0 auto;
+    }
+
+    .call .modal-content .card form input {
+        width: 100%;
+        display: block;
+        margin: 30px auto;
+        border: none;
+        border-bottom: 1px solid white;
+        outline: none;
+        background: transparent;
+        color: white;
+        font-size: 18px;
+    }
+
+    .call .modal-content .card form input::placeholder {
+        color: white;
+        padding-left: 0px;
+        font-size: 18px;
+    }
+
+    .call .modal-content .card form button {
+        margin: 20px auto;
+        display: block;
+        text-align: center;
+        border: none;
+        outline: none;
+        width: 250px;
+        transition: .5s;
+        background: black;
+    }
+
+    .call .modal-content .card form .svg-wrapper {
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+        margin: 0 auto;
+        height: 0;
+    }
+
+    .call .modal-content .card form .shape {
+        stroke-dasharray: 500 500 500 500;
+        stroke-dashoffset: 250;
+        stroke-width: 3px;
+        fill: transparent;
+        width: 250px;
+        stroke: #06b6fc;
+        border-bottom: 10px solid black;
+        background: #06b6fc;
+        transition: stroke-width 1s, stroke-dashoffset 1s, stroke-dasharray 1s;
+    }
+
+    .call .modal-content .card form .text {
+        font-family: 'Roboto Condensed';
+        font-size: 18px;
+        line-height: 20px;
+        letter-spacing: 2px;
+        color: #fff;
+        top: -48px;
+        position: relative;
+    }
+
+    .call .modal-content .card form .svg-wrapper:hover .shape {
+        stroke-width: 3px;
+        stroke-dashoffset: 0;
+        stroke-dasharray: 760;
+    }
+
+    .call .modal-content .close {
+        color: #aaaaaa;
+        float: right;
+        font-size: 35px;
+        font-weight: bold;
+        margin-right: 25px;
+        margin-top: 20px;
+    }
+
+    .call .modal-content .close:hover,
+    .call .modal-content .close:focus {
+        color: #06b6fc;
+        text-decoration: none;
+        cursor: pointer;
+    }
+    .go-top {
+        z-index: 99999999999999;
+        right: 1.8em;
+        bottom: 5em;
+        text-decoration: none;
+        position: fixed !important;
+        outline: none;
+        padding: 10px;
+        padding-top: 0;
+        background: transparent;
+        border: none;
+        border: 3px solid #06b6fc;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+    }
+    
+    .go-top .fa-angle-up {
+        font-size: 40px;
+        color: #06b6fc;
+    }
+}
+
+@media (max-width: 800px) {
+    .footer-bottom-scroll ol li {
+        display: inline-block;
+        padding: 10px;
+        padding-bottom: 0;
+        padding-right: 50px;
+        margin: 0 auto;
+      }
+      .footer-bottom-scroll ol li:nth-child(3){
+          padding-right: 0;
+      }
+
+    .call .modal {
+        padding-top: 100px;
+        /* Location of the box */
+    }
+
     .call .button {
-      border: 5px solid #aaa9a9;
-      border-radius: 50px;
-      padding: 8px; }
-      .call .button:hover {
+        border: 5px solid #aaa9a9;
+        border-radius: 50px;
+        padding: 8px;
+    }
+
+    .call .button:hover {
         opacity: 1;
         transition: .5s;
-        transform: scale(1.1); }
-      .call .button img {
-        width: 40px; }
-      .call .button .fa-headset {
-        font-size: 50px; }
-    .call .modal-content {
-      /* The Close Button */ }
-      .call .modal-content .card {
-        height: 450px; }
-        .call .modal-content .card .call-title {
-          font-size: 23px;
-          padding-top: 60px;
-          max-width: 90%;
-          margin: 0px auto;
-          display: block; }
-        .call .modal-content .card .call-text {
-          font-size: 16px;
-          padding-top: 15px;
-          max-width: 85%;
-          margin: 0px auto;
-          display: block; }
-        .call .modal-content .card form {
-          display: block;
-          width: 250px;
-          margin: 0 auto; }
-          .call .modal-content .card form input {
-            width: 100%;
-            display: block;
-            margin: 50px auto;
-            border: none;
-            border-bottom: 1px solid white;
-            outline: none;
-            background: transparent;
-            color: white;
-            font-size: 18px; }
-            .call .modal-content .card form input::placeholder {
-              color: white;
-              padding-left: 0px;
-              font-size: 18px; }
-          .call .modal-content .card form button {
-            margin: 20px auto;
-            display: block;
-            text-align: center;
-            border: none;
-            outline: none;
-            width: 250px;
-            transition: .5s;
-            background: black; }
-          .call .modal-content .card form .svg-wrapper {
-            position: relative;
-            top: 50%;
-            transform: translateY(-50%);
-            margin: 0 auto;
-            height: 0; }
-          .call .modal-content .card form .shape {
-            stroke-dasharray: 500 500 500 500;
-            stroke-dashoffset: 250;
-            stroke-width: 3px;
-            fill: transparent;
-            width: 250px;
-            stroke: #06b6fc;
-            border-bottom: 10px solid black;
-            background: #06b6fc;
-            transition: stroke-width 1s, stroke-dashoffset 1s, stroke-dasharray 1s; }
-          .call .modal-content .card form .text {
-            font-family: 'Roboto Condensed';
-            font-size: 18px;
-            line-height: 20px;
-            letter-spacing: 2px;
-            max-width: 100%;
-            color: #fff;
-            top: -52px;
-            position: relative; }
-          .call .modal-content .card form .svg-wrapper:hover .shape {
-            stroke-width: 3px;
-            stroke-dashoffset: 0;
-            stroke-dasharray: 760; }
-      .call .modal-content .close {
-        color: #aaaaaa;
-        float: right;
-        font-size: 35px;
-        font-weight: bold;
-        margin-right: 25px;
-        margin-top: 20px; }
-      .call .modal-content .close:hover,
-      .call .modal-content .close:focus {
-        color: #06b6fc;
-        text-decoration: none;
-        cursor: pointer; } }
-@media (max-width: 700px) {
-  .call {
-    /* Modal Content */ }
-    .call .modal {
-      padding-top: 100px !important;
-      /* Location of the box */ }
-    .call .modal-content {
-      /* The Close Button */ }
-      .call .modal-content .card .call-title {
-        font-size: 25px;
+        transform: scale(1.1);
+    }
+
+    .call .button img {
+        width: 40px;
+    }
+
+    .call .button .fa-headset {
+        font-size: 50px;
+    }
+
+  /* The Close Button */
+    }
+
+    .call .modal-content .card {
+        height: 450px;
+    }
+
+    .call .modal-content .card .call-title {
+        font-size: 23px;
         padding-top: 60px;
         max-width: 90%;
         margin: 0px auto;
-        display: block; }
-      .call .modal-content .card .call-text {
+        display: block;
+    }
+
+    .call .modal-content .card .call-text {
         font-size: 16px;
         padding-top: 15px;
         max-width: 85%;
         margin: 0px auto;
-        display: block; }
-      .call .modal-content .card form {
+        display: block;
+    }
+
+    .call .modal-content .card form {
+        display: block;
+        width: 250px;
+        margin: 0 auto;
+    }
+
+    .call .modal-content .card form input {
+        width: 100%;
+        display: block;
+        margin: 50px auto;
+        border: none;
+        border-bottom: 1px solid white;
+        outline: none;
+        background: transparent;
+        color: white;
+        font-size: 18px;
+    }
+
+    .call .modal-content .card form input::placeholder {
+        color: white;
+        padding-left: 0px;
+        font-size: 18px;
+    }
+
+    .call .modal-content .card form button {
+        margin: 20px auto;
+        display: block;
+        text-align: center;
+        border: none;
+        outline: none;
+        width: 250px;
+        transition: .5s;
+        background: black;
+    }
+
+    .call .modal-content .card form .svg-wrapper {
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+        margin: 0 auto;
+        height: 0;
+    }
+
+    .call .modal-content .card form .shape {
+        stroke-dasharray: 500 500 500 500;
+        stroke-dashoffset: 250;
+        stroke-width: 3px;
+        fill: transparent;
+        width: 250px;
+        stroke: #06b6fc;
+        border-bottom: 10px solid black;
+        background: #06b6fc;
+        transition: stroke-width 1s, stroke-dashoffset 1s, stroke-dasharray 1s;
+    }
+
+    .call .modal-content .card form .text {
+        font-family: 'Roboto Condensed';
+        font-size: 18px;
+        line-height: 20px;
+        letter-spacing: 2px;
+        max-width: 100%;
+        color: #fff;
+        top: -52px;
+        position: relative;
+    }
+
+    .call .modal-content .card form .svg-wrapper:hover .shape {
+        stroke-width: 3px;
+        stroke-dashoffset: 0;
+        stroke-dasharray: 760;
+    }
+
+    .call .modal-content .close {
+        color: #aaaaaa;
+        float: right;
+        font-size: 35px;
+        font-weight: bold;
+        margin-right: 25px;
+        margin-top: 20px;
+    }
+
+    .call .modal-content .close:hover,
+    .call .modal-content .close:focus {
+        color: #06b6fc;
+        text-decoration: none;
+        cursor: pointer;
+    }
+    .go-top {
+        z-index: 99999999999999;
+        right: 1.8em;
+        bottom: 6em;
+        padding: 3px;
+        padding-left: 7px;
+        width: 40px;
+        height: 40px;
+    }
+    .go-top .fa-angle-up {
+        font-size: 30px;
+    }
+
+
+@media (max-width: 700px) {
+    .footer-bottom-scroll ol li {
+        display: inline-block;
+        padding: 10px;
+        padding-bottom: 0;
+        padding-right: 50px;
+        margin: 0 auto;
+      }
+      .footer-bottom-scroll ol li:nth-child(3){
+          padding-right: 0;
+      }
+
+    .call .modal {
+        padding-top: 100px !important;
+        /* Location of the box */
+    }
+
+
+
+    .call .modal-content .card .call-title {
+        font-size: 25px;
+        padding-top: 60px;
+        max-width: 90%;
+        margin: 0px auto;
+        display: block;
+    }
+
+    .call .modal-content .card .call-text {
+        font-size: 16px;
+        padding-top: 15px;
+        max-width: 85%;
+        margin: 0px auto;
+        display: block;
+    }
+
+    .call .modal-content .card form {
         display: block;
         width: 200px;
-        margin: 0 auto; }
-        .call .modal-content .card form input {
-          width: 100%;
-          display: block;
-          margin: 30px auto;
-          border: none;
-          border-bottom: 1px solid white;
-          outline: none;
-          background: transparent;
-          color: white;
-          font-size: 18px; }
-          .call .modal-content .card form input::placeholder {
-            color: white;
-            padding-left: 0px;
-            font-size: 15px; }
-        .call .modal-content .card form button {
-          margin: 20px auto;
-          display: block;
-          text-align: center;
-          border: none;
-          outline: none;
-          width: 250px;
-          transition: .5s;
-          background: black; }
-        .call .modal-content .card form .svg-wrapper {
-          position: relative;
-          top: 50%;
-          transform: translateY(-50%);
-          margin: 0 auto;
-          height: 0; }
-        .call .modal-content .card form .shape {
-          stroke-dasharray: 500 500 500 500;
-          stroke-dashoffset: 300;
-          stroke-width: 3px;
-          fill: transparent;
-          width: 200px;
-          height: 40px;
-          stroke: #06b6fc;
-          border-bottom: 10px solid black;
-          background: #06b6fc;
-          transition: stroke-width 1s, stroke-dashoffset 1s, stroke-dasharray 1s; }
-        .call .modal-content .card form .text {
-          font-family: 'Roboto Condensed';
-          font-size: 16px;
-          line-height: 16px;
-          letter-spacing: 2px;
-          color: #fff;
-          max-width: 80%;
-          margin: 0px;
-          top: -55px;
-          position: relative; }
-        .call .modal-content .card form .svg-wrapper:hover .shape {
-          stroke-width: 3px;
-          stroke-dashoffset: 0;
-          stroke-dasharray: 760; }
-      .call .modal-content .close {
+        margin: 0 auto;
+    }
+
+    .call .modal-content .card form input {
+        width: 100%;
+        display: block;
+        margin: 30px auto;
+        border: none;
+        border-bottom: 1px solid white;
+        outline: none;
+        background: transparent;
+        color: white;
+        font-size: 18px;
+    }
+
+    .call .modal-content .card form input::placeholder {
+        color: white;
+        padding-left: 0px;
+        font-size: 15px;
+    }
+
+    .call .modal-content .card form button {
+        margin: 20px auto;
+        display: block;
+        text-align: center;
+        border: none;
+        outline: none;
+        width: 250px;
+        transition: .5s;
+        background: black;
+    }
+
+    .call .modal-content .card form .svg-wrapper {
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+        margin: 0 auto;
+        height: 0;
+    }
+
+    .call .modal-content .card form .shape {
+        stroke-dasharray: 500 500 500 500;
+        stroke-dashoffset: 300;
+        stroke-width: 3px;
+        fill: transparent;
+        width: 200px;
+        height: 40px;
+        stroke: #06b6fc;
+        border-bottom: 10px solid black;
+        background: #06b6fc;
+        transition: stroke-width 1s, stroke-dashoffset 1s, stroke-dasharray 1s;
+    }
+
+    .call .modal-content .card form .text {
+        font-family: 'Roboto Condensed';
+        font-size: 16px;
+        line-height: 16px;
+        letter-spacing: 2px;
+        color: #fff;
+        max-width: 80%;
+        margin: 0px;
+        top: -55px;
+        position: relative;
+    }
+
+    .call .modal-content .card form .svg-wrapper:hover .shape {
+        stroke-width: 3px;
+        stroke-dashoffset: 0;
+        stroke-dasharray: 760;
+    }
+
+    .call .modal-content .close {
         color: #aaaaaa;
         float: right;
         font-size: 25px;
         font-weight: bold;
         margin-right: 25px;
-        margin-top: 20px; }
-      .call .modal-content .close:hover,
-      .call .modal-content .close:focus {
+        margin-top: 20px;
+    }
+
+    .call .modal-content .close:hover,
+    .call .modal-content .close:focus {
         color: #06b6fc;
         text-decoration: none;
-        cursor: pointer; }
+        cursor: pointer;
+    }
 
-  .go-top {
-    z-index: 99999999999999;
-    right: 2.1em;
-    bottom: 2em; }
-    .go-top:hover {
-      text-decoration: none;
-      color: black; } }
+    .go-top {
+        z-index: 99999999999999;
+        right: 1.5em;
+        bottom: 5em;
+        padding-top: 2px;
+    }
+}
+
 @media (max-width: 600px) {
-  .call {
-    /* Modal Content */ }
-    .call .modal {
-      padding-top: 100px !important;
-      /* Location of the box */ }
-    .call .modal-content {
-      width: 80%;
-      /* The Close Button */ }
-      .call .modal-content .card .call-title {
-        font-size: 20px;
-        padding-top: 60px;
-        max-width: 90%;
-        margin: 0px auto;
-        display: block; }
-      .call .modal-content .card .call-text {
-        font-size: 13px;
-        padding-top: 15px;
-        max-width: 85%;
-        margin: 0px auto;
-        display: block; }
-      .call .modal-content .card form {
-        display: block;
-        width: 200px;
-        margin: 0 auto; }
-        .call .modal-content .card form input {
-          width: 100%;
-          display: block;
-          margin: 30px auto;
-          border: none;
-          border-bottom: 1px solid white;
-          outline: none;
-          background: transparent;
-          color: white;
-          font-size: 18px; }
-          .call .modal-content .card form input::placeholder {
-            color: white;
-            padding-left: 0px;
-            font-size: 15px; }
-        .call .modal-content .card form button {
-          margin: 20px auto;
-          display: block;
-          text-align: center;
-          border: none;
-          outline: none;
-          width: 250px;
-          transition: .5s;
-          background: black; }
-        .call .modal-content .card form .svg-wrapper {
-          position: relative;
-          top: 50%;
-          transform: translateY(-50%);
-          margin: 0 auto;
-          height: 0; }
-        .call .modal-content .card form .shape {
-          stroke-dasharray: 500 500 500 500;
-          stroke-dashoffset: 300;
-          stroke-width: 3px;
-          fill: transparent;
-          width: 200px;
-          height: 40px;
-          stroke: #06b6fc;
-          border-bottom: 10px solid black;
-          background: #06b6fc;
-          transition: stroke-width 1s, stroke-dashoffset 1s, stroke-dasharray 1s; }
-        .call .modal-content .card form .text {
-          font-family: 'Roboto Condensed';
-          font-size: 16px;
-          line-height: 16px;
-          letter-spacing: 2px;
-          color: #fff;
-          max-width: 80%;
-          margin: 0px;
-          top: -55px;
-          position: relative; }
-        .call .modal-content .card form .svg-wrapper:hover .shape {
-          stroke-width: 3px;
-          stroke-dashoffset: 0;
-          stroke-dasharray: 760; }
-      .call .modal-content .close {
-        color: #aaaaaa;
-        float: right;
-        font-size: 25px;
-        font-weight: bold;
-        margin-right: 25px;
-        margin-top: 20px; }
-      .call .modal-content .close:hover,
-      .call .modal-content .close:focus {
-        color: #06b6fc;
-        text-decoration: none;
-        cursor: pointer; } }
-@media (max-width: 500px) {
-  .call {
-    /* Modal Content */ }
-    .call .button {
-      border: 5px solid #aaa9a9;
-      border-radius: 50px;
-      padding: 10px;
-      background: #fdd265;
-      outline: none;
-      box-shadow: 0px 0px 1px 5px #0000001a;
-      opacity: .7;
-      transition: .5s; }
-      .call .button:hover {
-        opacity: 1;
-        transition: .5s;
-        transform: scale(1.1); }
-      .call .button img {
-        width: 25px; }
-      .call .button .fa-headset {
-        font-size: 50px; }
-    .call .modal {
-      padding-top: 100px !important;
-      /* Location of the box */ }
-    .call .modal-content {
-      width: 80%;
-      /* The Close Button */ }
-      .call .modal-content .card .call-title {
-        font-size: 20px;
-        padding-top: 60px;
-        max-width: 90%;
-        margin: 0px auto;
-        display: block; }
-      .call .modal-content .card .call-text {
-        font-size: 13px;
-        padding-top: 15px;
-        max-width: 85%;
-        margin: 0px auto;
-        display: block; }
-      .call .modal-content .card form {
-        display: block;
-        width: 200px;
-        margin: 0 auto; }
-        .call .modal-content .card form input {
-          width: 100%;
-          display: block;
-          margin: 30px auto;
-          border: none;
-          border-bottom: 1px solid white;
-          outline: none;
-          background: transparent;
-          color: white;
-          font-size: 18px; }
-          .call .modal-content .card form input::placeholder {
-            color: white;
-            padding-left: 0px;
-            font-size: 15px; }
-        .call .modal-content .card form button {
-          margin: 20px auto;
-          display: block;
-          text-align: center;
-          border: none;
-          outline: none;
-          width: 250px;
-          transition: .5s;
-          background: black; }
-        .call .modal-content .card form .svg-wrapper {
-          position: relative;
-          top: 50%;
-          transform: translateY(-50%);
-          margin: 0 auto;
-          height: 0; }
-        .call .modal-content .card form .shape {
-          stroke-dasharray: 500 500 500 500;
-          stroke-dashoffset: 300;
-          stroke-width: 3px;
-          fill: transparent;
-          width: 200px;
-          height: 40px;
-          stroke: #06b6fc;
-          border-bottom: 10px solid black;
-          background: #06b6fc;
-          transition: stroke-width 1s, stroke-dashoffset 1s, stroke-dasharray 1s; }
-        .call .modal-content .card form .text {
-          font-family: 'Roboto Condensed';
-          font-size: 16px;
-          line-height: 16px;
-          letter-spacing: 2px;
-          color: #fff;
-          max-width: 80%;
-          margin: 0px;
-          top: -48px;
-          position: relative; }
-        .call .modal-content .card form .svg-wrapper:hover .shape {
-          stroke-width: 3px;
-          stroke-dashoffset: 0;
-          stroke-dasharray: 760; }
-      .call .modal-content .close {
-        color: #aaaaaa;
-        float: right;
-        font-size: 25px;
-        font-weight: bold;
-        margin-right: 25px;
-        margin-top: 20px; }
-      .call .modal-content .close:hover,
-      .call .modal-content .close:focus {
-        color: #06b6fc;
-        text-decoration: none;
-        cursor: pointer; }
 
-  .go-top {
-    outline: none !important; }
-    .go-top img {
-      width: 35px; } }
-@media (max-width: 420px) {
-  .call {
-    /* Modal Content */ }
-    .call .button {
-      border: 5px solid #aaa9a9;
-      border-radius: 50px;
-      padding: 10px;
-      background: #fdd265;
-      outline: none;
-      box-shadow: 0px 0px 1px 5px #0000001a;
-      opacity: .7;
-      transition: .5s; }
-      .call .button:hover {
-        opacity: 1;
-        transition: .5s;
-        transform: scale(1); }
-      .call .button img {
-        width: 20px; }
-      .call .button .fa-headset {
-        font-size: 50px; }
     .call .modal {
-      padding-top: 100px !important;
-      /* Location of the box */ }
+        padding-top: 100px !important;
+        /* Location of the box */
+    }
+
     .call .modal-content {
-      width: 80%;
-      /* The Close Button */ }
-      .call .modal-content .card .call-title {
+        width: 80%;
+        /* The Close Button */
+    }
+
+    .call .modal-content .card .call-title {
         font-size: 20px;
         padding-top: 60px;
         max-width: 90%;
         margin: 0px auto;
-        display: block; }
-      .call .modal-content .card .call-text {
+        display: block;
+    }
+
+    .call .modal-content .card .call-text {
         font-size: 13px;
         padding-top: 15px;
         max-width: 85%;
         margin: 0px auto;
-        display: block; }
-      .call .modal-content .card form {
+        display: block;
+    }
+
+    .call .modal-content .card form {
+        display: block;
+        width: 200px;
+        margin: 0 auto;
+    }
+
+    .call .modal-content .card form input {
+        width: 100%;
+        display: block;
+        margin: 30px auto;
+        border: none;
+        border-bottom: 1px solid white;
+        outline: none;
+        background: transparent;
+        color: white;
+        font-size: 18px;
+    }
+
+    .call .modal-content .card form input::placeholder {
+        color: white;
+        padding-left: 0px;
+        font-size: 15px;
+    }
+
+    .call .modal-content .card form button {
+        margin: 20px auto;
+        display: block;
+        text-align: center;
+        border: none;
+        outline: none;
+        width: 250px;
+        transition: .5s;
+        background: black;
+    }
+
+    .call .modal-content .card form .svg-wrapper {
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+        margin: 0 auto;
+        height: 0;
+    }
+
+    .call .modal-content .card form .shape {
+        stroke-dasharray: 500 500 500 500;
+        stroke-dashoffset: 300;
+        stroke-width: 3px;
+        fill: transparent;
+        width: 200px;
+        height: 40px;
+        stroke: #06b6fc;
+        border-bottom: 10px solid black;
+        background: #06b6fc;
+        transition: stroke-width 1s, stroke-dashoffset 1s, stroke-dasharray 1s;
+    }
+
+    .call .modal-content .card form .text {
+        font-family: 'Roboto Condensed';
+        font-size: 16px;
+        line-height: 16px;
+        letter-spacing: 2px;
+        color: #fff;
+        max-width: 80%;
+        margin: 0px;
+        top: -55px;
+        position: relative;
+    }
+
+    .call .modal-content .card form .svg-wrapper:hover .shape {
+        stroke-width: 3px;
+        stroke-dashoffset: 0;
+        stroke-dasharray: 760;
+    }
+
+    .call .modal-content .close {
+        color: #aaaaaa;
+        float: right;
+        font-size: 25px;
+        font-weight: bold;
+        margin-right: 25px;
+        margin-top: 20px;
+    }
+
+    .call .modal-content .close:hover,
+    .call .modal-content .close:focus {
+        color: #06b6fc;
+        text-decoration: none;
+        cursor: pointer;
+    }
+}
+
+@media (max-width: 500px) {
+    .call {
+        font-family: inter !important;
+        z-index: 99999999 !important;
+        right: 0em;
+        bottom: 10em;
+        color: #FAFAFA;
+        padding: 5px;
+        position: fixed !important;
+        /* Modal Content */
+    } 
+    .call button .fa-phone{
+        font-size: 20px;
+    }
+    .call .button {
+        border: 5px solid #aaa9a9;
+        border-radius: 50px;
+        padding: 10px;
+        background: #fdd265;
+        outline: none;
+        box-shadow: 0px 0px 1px 5px #0000001a;
+        opacity: .7;
+        transition: .5s;
+    }
+
+    .call .button:hover {
+        opacity: 1;
+        transition: .5s;
+        transform: scale(1.1);
+    }
+    .call .modal {
+        padding-top: 100px !important;
+        /* Location of the box */
+    }
+
+    .call .modal-content {
+        width: 80%;
+        /* The Close Button */
+    }
+
+    .call .modal-content .card .call-title {
+        font-size: 20px;
+        padding-top: 60px;
+        max-width: 90%;
+        margin: 0px auto;
+        display: block;
+    }
+
+    .call .modal-content .card .call-text {
+        font-size: 13px;
+        padding-top: 15px;
+        max-width: 85%;
+        margin: 0px auto;
+        display: block;
+    }
+
+    .call .modal-content .card form {
+        display: block;
+        width: 200px;
+        margin: 0 auto;
+    }
+
+    .call .modal-content .card form input {
+        width: 100%;
+        display: block;
+        margin: 30px auto;
+        border: none;
+        border-bottom: 1px solid white;
+        outline: none;
+        background: transparent;
+        color: white;
+        font-size: 18px;
+    }
+
+    .call .modal-content .card form input::placeholder {
+        color: white;
+        padding-left: 0px;
+        font-size: 15px;
+    }
+
+    .call .modal-content .card form button {
+        margin: 20px auto;
+        display: block;
+        text-align: center;
+        border: none;
+        outline: none;
+        width: 250px;
+        transition: .5s;
+        background: black;
+    }
+
+    .call .modal-content .card form .svg-wrapper {
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+        margin: 0 auto;
+        height: 0;
+    }
+
+    .call .modal-content .card form .shape {
+        stroke-dasharray: 500 500 500 500;
+        stroke-dashoffset: 300;
+        stroke-width: 3px;
+        fill: transparent;
+        width: 200px;
+        height: 40px;
+        stroke: #06b6fc;
+        border-bottom: 10px solid black;
+        background: #06b6fc;
+        transition: stroke-width 1s, stroke-dashoffset 1s, stroke-dasharray 1s;
+    }
+
+    .call .modal-content .card form .text {
+        font-family: 'Roboto Condensed';
+        font-size: 16px;
+        line-height: 16px;
+        letter-spacing: 2px;
+        color: #fff;
+        max-width: 80%;
+        margin: 0px;
+        top: -48px;
+        position: relative;
+    }
+
+    .call .modal-content .card form .svg-wrapper:hover .shape {
+        stroke-width: 3px;
+        stroke-dashoffset: 0;
+        stroke-dasharray: 760;
+    }
+
+    .call .modal-content .close {
+        color: #aaaaaa;
+        float: right;
+        font-size: 25px;
+        font-weight: bold;
+        margin-right: 25px;
+        margin-top: 20px;
+    }
+
+    .call .modal-content .close:hover,
+    .call .modal-content .close:focus {
+        color: #06b6fc;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    .go-top {
+        outline: none !important;
+    }
+}
+
+@media (max-width: 420px) {
+    .footer-bottom-scroll ol li {
+        display: inline-block;
+        padding: 10px;
+        padding-bottom: 0;
+        padding-right: 40px;
+        margin: 0 auto;
+      }
+      .footer-bottom-scroll ol li:nth-child(3){
+          padding-right: 0;
+      }
+    .call .button {
+        border: 5px solid #aaa9a9;
+        border-radius: 50px;
+        padding: 10px;
+        background: #fdd265;
+        outline: none;
+        box-shadow: 0px 0px 1px 5px #0000001a;
+        opacity: .7;
+        transition: .5s;
+    }
+
+    .call .button:hover {
+        opacity: 1;
+        transition: .5s;
+        transform: scale(1);
+    }
+    .call .modal {
+        padding-top: 100px !important;
+        /* Location of the box */
+    }
+
+    .call .modal-content {
+        width: 80%;
+        /* The Close Button */
+    }
+
+    .call .modal-content .card .call-title {
+        font-size: 20px;
+        padding-top: 60px;
+        max-width: 90%;
+        margin: 0px auto;
+        display: block;
+    }
+
+    .call .modal-content .card .call-text {
+        font-size: 13px;
+        padding-top: 15px;
+        max-width: 85%;
+        margin: 0px auto;
+        display: block;
+    }
+
+    .call .modal-content .card form {
         display: block;
         width: 150px;
-        margin: 0 auto; }
-        .call .modal-content .card form input {
-          width: 100%;
-          display: block;
-          margin: 30px auto;
-          border: none;
-          border-bottom: 1px solid white;
-          outline: none;
-          background: transparent;
-          color: white;
-          font-size: 18px; }
-          .call .modal-content .card form input::placeholder {
-            color: white;
-            padding-left: 0px;
-            font-size: 15px; }
-        .call .modal-content .card form button {
-          margin: 20px auto;
-          display: block;
-          text-align: center;
-          border: none;
-          outline: none;
-          width: 150px;
-          transition: .5s;
-          background: black; }
-        .call .modal-content .card form .svg-wrapper {
-          position: relative;
-          top: 50%;
-          transform: translateY(-50%);
-          margin: 0 auto;
-          height: 0; }
-        .call .modal-content .card form .shape {
-          stroke-dasharray: 500 500 500 500;
-          stroke-dashoffset: 300;
-          stroke-width: 3px;
-          fill: transparent;
-          width: 150px;
-          height: 40px;
-          stroke: #06b6fc;
-          border-bottom: 10px solid black;
-          background: #06b6fc;
-          transition: stroke-width 1s, stroke-dashoffset 1s, stroke-dasharray 1s; }
-        .call .modal-content .card form .text {
-          font-family: 'Roboto Condensed';
-          font-size: 12px;
-          line-height: 16px;
-          letter-spacing: 2px;
-          color: #fff;
-          max-width: 90%;
-          margin: 0px auto;
-          top: -60px;
-          position: relative; }
-        .call .modal-content .card form .svg-wrapper:hover .shape {
-          stroke-width: 3px;
-          stroke-dashoffset: 0;
-          stroke-dasharray: 760; }
-      .call .modal-content .close {
+        margin: 0 auto;
+    }
+
+    .call .modal-content .card form input {
+        width: 100%;
+        display: block;
+        margin: 30px auto;
+        border: none;
+        border-bottom: 1px solid white;
+        outline: none;
+        background: transparent;
+        color: white;
+        font-size: 18px;
+    }
+
+    .call .modal-content .card form input::placeholder {
+        color: white;
+        padding-left: 0px;
+        font-size: 15px;
+    }
+
+    .call .modal-content .card form button {
+        margin: 20px auto;
+        display: block;
+        text-align: center;
+        border: none;
+        outline: none;
+        width: 150px;
+        transition: .5s;
+        background: black;
+    }
+
+    .call .modal-content .card form .svg-wrapper {
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+        margin: 0 auto;
+        height: 0;
+    }
+
+    .call .modal-content .card form .shape {
+        stroke-dasharray: 500 500 500 500;
+        stroke-dashoffset: 300;
+        stroke-width: 3px;
+        fill: transparent;
+        width: 150px;
+        height: 40px;
+        stroke: #06b6fc;
+        border-bottom: 10px solid black;
+        background: #06b6fc;
+        transition: stroke-width 1s, stroke-dashoffset 1s, stroke-dasharray 1s;
+    }
+
+    .call .modal-content .card form .text {
+        font-family: 'Roboto Condensed';
+        font-size: 12px;
+        line-height: 16px;
+        letter-spacing: 2px;
+        color: #fff;
+        max-width: 90%;
+        margin: 0px auto;
+        top: -60px;
+        position: relative;
+    }
+
+    .call .modal-content .card form .svg-wrapper:hover .shape {
+        stroke-width: 3px;
+        stroke-dashoffset: 0;
+        stroke-dasharray: 760;
+    }
+
+    .call .modal-content .close {
         color: #aaaaaa;
         float: right;
         font-size: 25px;
         font-weight: bold;
         margin-right: 25px;
-        margin-top: 20px; }
-      .call .modal-content .close:hover,
-      .call .modal-content .close:focus {
+        margin-top: 20px;
+    }
+
+    .call .modal-content .close:hover,
+    .call .modal-content .close:focus {
         color: #06b6fc;
         text-decoration: none;
-        cursor: pointer; }
+        cursor: pointer;
+    }
+    .go-top {
+        outline: none;
+        right: .8em;
+        bottom: 5em;
+        padding: 5px;
+        padding-top: 0px;
+        padding-left: 5px;
+        width: 35px;
+        height: 35px;
+    }
+}
 
-  .go-top {
-    outline: none !important; }
-    .go-top img {
-      width: 40px; } }
 @media (max-width: 360px) {
-  .call {
-    bottom: 6em; }
+
+    .footer-bottom-scroll ol li {
+        display: inline-block;
+        padding: 10px;
+        padding-bottom: 0;
+        padding-right: 40px;
+        margin: 0 auto;
+      }
+      .footer-bottom-scroll ol li:nth-child(3){
+          padding-right: 0;
+      }
+    .call {
+        bottom: 8em;
+    }
+    .call button .fa-phone{
+        font-size: 20px;
+        animation: animate 1s infinite;
+        /*transform: rotate(110deg);*/
+    }
     .call .button {
-      border: 3px solid #aaa9a9;
-      border-radius: 50px;
-      padding: 7px;
-      background: #fdd265;
-      outline: none;
-      box-shadow: 0px 0px 1px 5px #0000001a;
-      opacity: .7;
-      transition: .5s; }
-      .call .button:hover {
+        border: 3px solid #aaa9a9;
+        border-radius: 50px;
+        padding: 7px;
+        background: #fdd265;
+        outline: none;
+        box-shadow: 0px 0px 1px 5px #0000001a;
+        opacity: .7;
+        transition: .5s;
+    }
+
+    .call .button:hover {
         opacity: 1;
         transition: .5s;
-        transform: scale(1); }
-      .call .button img {
-        width: 20px; }
-      .call .button .fa-headset {
-        font-size: 30px; }
+        transform: scale(1);
+    }
+    .go-top {
+        right: .5em;
+        bottom: 5em;
+        padding: 5px;
+        padding-top: 1px;
+        padding-left: 6px;
+        width: 35px;
+        height: 35px;
+    }
 
-        .go-top {
-          z-index: 99999999999999;
-          right: 1.5em;
-          bottom: 1em;
-          text-decoration: none;
-          position: fixed !important;
-          outline: none;
-          padding: 5px;
-          padding-top: 1px;
-          padding-left: 6px;
-          background: transparent;
-          border: none;
-          border: 3px solid #06b6fc;
-          border-radius: 50%; 
-          width: 35px;
-          height: 35px;
-        }
-          .go-top .fa-angle-up {
-            font-size: 25px;
-            color: #06b6fc;}
-        
+    .go-top .fa-angle-up {
+        font-size: 25px;
+        color: #06b6fc;
+    }
+}
+
 /*# sourceMappingURL=animate%20go%20top.css.map */
