@@ -21,9 +21,21 @@ class MailController extends Controller
             return back()->with(['error' => $validate->errors()]);
         }
 
-        Mail::to('hakimovtohirbek@gmail.com')
-            ->send(new CallbackAdded((object)$validate->validate()));
+        $validated = $validate->validate();
 
-        return back()->with(['success' => 'Message has been sent successfully!']);
+        $apiToken = config('telegram.api_token');
+        $text = "New lead\nName: " . $validated['name'] . "\nPhone: " . $validated['phone'];
+
+        $data = [
+            'chat_id' => config('telegram.chat_id'),
+            'text' => $text,
+        ];
+
+        $response = file_get_contents("https://api.telegram.org/bot$apiToken/sendMessage?" . http_build_query($data));
+
+        if (json_decode($response)->ok) {
+            return back()->with(['success' => 'Message has been sent successfully!']);
+        }
+        return back()->with(['error' => 'Serverda xatolik ro\'y berdi. Iltimos, qayta urinib ko\'ring.']);
     }
 }
