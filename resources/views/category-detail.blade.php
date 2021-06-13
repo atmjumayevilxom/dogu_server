@@ -9,8 +9,10 @@
 <div class="cards_2">
     @foreach($category->products as $product)
         <div class="card_2 wow fadeInUp">
-            <img src="{{ Voyager::image( $product->image ) }}" alt="" class="card_image_2">
-            <a href="{{ url('/products/' . $product->id) }}"><span herf="#">{{$category->name}}</span></a>
+            <img src="{{ Voyager::image( $product->image ) }}" alt="{{ $product->title }}" class="card_image_2">
+            <a href="{{ route('product.show', ['locale' => session()->get('locale'), 'id' => $product->id]) }}">
+                <span herf="#">{{$category->name}}</span>
+            </a>
         </div>
     @endforeach
 </div>

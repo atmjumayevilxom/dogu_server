@@ -17,4 +17,8 @@ class Category extends Model
     {
         return $this->hasMany(Product::class);
     }
+
+    public function scopeUnfeatured($query) {
+        return $query->where('featured', false);
+    }
 }

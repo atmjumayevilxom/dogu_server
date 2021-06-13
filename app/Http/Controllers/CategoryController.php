@@ -9,7 +9,7 @@ class CategoryController extends Controller
 {
     public function index()
     {
-        $categories = Category::get()->translate(app()->getLocale());
+        $categories = Category::unfeatured()->get()->translate(app()->getLocale());
         return view('categories', compact('categories'));
     }
 
