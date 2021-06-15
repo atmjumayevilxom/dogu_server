@@ -35,7 +35,7 @@
                     </li>
                     @endforeach
                 </ul>
-            </div>
+            </div> 
             <div class="col-sm-4">
                 <p class="title">{!! __('footer.Обратная связь') !!}</p>
                 <ul class="navbar">
