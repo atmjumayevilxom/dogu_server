@@ -16,20 +16,24 @@
             <div class="col-sm-4">
                 <p class="title">{!! __('footer.Оборудование') !!}</p>
                 <ul class="navbar">
-                @foreach ($context->regular as $category)
+                    @foreach ($context->regular as $category)
                     <li>
-                    <a href='{{ route('category.show', ['locale' => session()->get('locale'), 'id' => $category->id]) }}'>
-                                      {{ $category->name }}
-</li>
+                        <a href='{{ route('category.show', ['locale' => session()->get('locale'), 'id' => $category->id]) }}'>
+                            {{ $category->name }}
+                    </li>
                     @endforeach
                 </ul>
             </div>
             <div class="col-sm-4">
                 <p class="title">{!! __('footer.Сетевые элементы') !!}</p>
                 <ul class="navbar">
-                    <li><a href="./Projects.html">{!! __('footer.Диффузоры') !!}</a></li>
-                    <li><a href="./Projects.html">{!! __('footer.Клапаны') !!}</a></li>
-                    <li><a href="./Projects.html">{!! __('footer.Решетки') !!}</a></li>
+                    @foreach ($context->featured as $category)
+                    <li>
+                        <a href='{{ route('category.show', ['locale' => session()->get('locale'), 'id' => $category->id]) }}'>
+                            {{ $category->name }}
+                        </a>
+                    </li>
+                    @endforeach
                 </ul>
             </div>
             <div class="col-sm-4">
@@ -61,7 +65,7 @@
     <div class="container">
         <div class="footer-items" style="padding: 50px 0px">
             <div class="item-1">
-                <h4 class="font-00-02">{!! __('footer.О компании    ') !!} <i class="fa fa-angle-down"></i></h4>
+                <h4 class="font-00-02">{!! __('footer.О компании ') !!} <i class="fa fa-angle-down"></i></h4>
                 <ul class="navbar">
                     <li><a href="#">{!! __('footer.Центральные приточно-вытяжные установки') !!}</a></li>
                     <li><a href="#">{!! __('footer.Компактные установки с рекуперацией') !!}</a></li>
@@ -142,12 +146,13 @@
     <ol>
         <li>
             <a href="https://t.me/doguuzbekistan" "><i class=" fab fa-telegram-plane scroll-icon "></i></a></li>
-        <li><a href="tel:+99893 042 90 90 "><i class="fa fa-phone scroll-icon "></i></a></li>
-        <li><a href="mailto: ibrokhim@doguhvac.com "><i class="fas fa-envelope scroll-icon "></i></a></li>
+        <li><a href=" tel:+99893 042 90 90 "><i class=" fa fa-phone scroll-icon "></i></a></li>
+        <li><a href=" mailto: ibrokhim@doguhvac.com "><i class=" fas fa-envelope scroll-icon "></i></a></li>
     </ol>
 </div>
 {{-- @if(session()->has('message'))
-    <div><img src="{{ session()->get('message') }}"></div>
+    <div><img src="{{ session()->get('message') }}">
+</div>
 @endif --}}
 <script>
     [...document.querySelectorAll('.item-1')].map(item => {
@@ -166,17 +171,17 @@
     var span = document.getElementsByClassName("close")[0];
 
     // When the user clicks the button, open the modal
-    btn.onclick = function () {
+    btn.onclick = function() {
         modal.style.display = "block";
     }
 
     // When the user clicks on <span> (x), close the modal
-    span.onclick = function () {
+    span.onclick = function() {
         modal.style.display = "none";
     }
 
     // When the user clicks anywhere outside of the modal, close it
-    window.onclick = function (event) {
+    window.onclick = function(event) {
         if (event.target == modal) {
             modal.style.display = "none";
         }
@@ -191,8 +196,6 @@
             clickable: true,
         },
     });
-
-
 </script>
 <!--call end-->
 
