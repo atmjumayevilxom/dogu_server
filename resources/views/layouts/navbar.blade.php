@@ -117,7 +117,7 @@
                                   </li> 
                                   @endforeach
 
-                              </ul>
+                              </ul> 
                           </div>
                           <div class="item-1">
                               <h4 class="font-00-02"><a href='{{ route('category.indexx', session()->get('locale')) }}'>{!! __('navbar.Сетевые элементы') !!}</a> <i class="fa fa-angle-down"></i></h4>
