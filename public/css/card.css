@@ -5,7 +5,9 @@
 }
 
 .cards_2 {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 60px 24px;
     width: 100%;
     max-width: 1100px;
     align-items: center;

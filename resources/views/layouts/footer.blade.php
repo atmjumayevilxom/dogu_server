@@ -35,7 +35,7 @@
                     </li>
                     @endforeach
                 </ul>
-            </div> 
+            </div>
             <div class="col-sm-4">
                 <p class="title">{!! __('footer.Обратная связь') !!}</p>
                 <ul class="navbar">
@@ -67,7 +67,7 @@
             <div class="item-1">
                 <h4 class="font-00-02">{!! __('footer.О компании') !!} <i class="fa fa-angle-down"></i></h4>
                 <ul class="navbar">
-                <li><a href="{{ route('company', session()->get('locale')) }}">{!! __('footer.О компании') !!}</a></li>
+                    <li><a href="{{ route('company', session()->get('locale')) }}">{!! __('footer.О компании') !!}</a></li>
                     <li><a href="{{ route('project', session()->get('locale')) }}">{!! __('footer.Проекты') !!}</a></li>
                     <li><a href="{{ route('service', session()->get('locale')) }}">{!! __('footer.Сервис') !!}</a></li>
                     <li><a href="{{ route('video', session()->get('locale')) }}">{!! __('footer.Видео') !!}</a></li>
@@ -76,9 +76,13 @@
             <div class="item-1 ">
                 <h4 class="font-00-02">{!! __('footer.Сетевые элементы') !!} <i class="fa fa-angle-down"></i></h4>
                 <ul class="navbar">
-                    <li><a href="#">{!! __('footer.Решетки') !!}</a></li>
-                    <li><a href="#">{!! __('footer.Диффузоры') !!}</a></li>
-                    <li><a href="#">{!! __('footer.Клапаны') !!}</a></li>
+                @foreach ($context->featured as $category)
+                    <li>
+                        <a href='{{ route('category.show', ['locale' => session()->get('locale'), 'id' => $category->id]) }}'>
+                            {{ $category->name }}
+                        </a>
+                    </li>
+@endforeach
                 </ul>
             </div>
             <div class="item-1 ">
@@ -92,12 +96,12 @@
             <div class="item-1 last">
                 <h4 class="font-00-02">{!! __('footer.Оборудование') !!}<i class="fa fa-angle-down "></i></h4>
                 <ul class="navbar">
-                    <li><a href="#">{!! __('footer.Центральные приточно-вытяжные установки') !!}</a></li>
-                    <li><a href="#">{!! __('footer.Компактные установки с рекуперацией') !!}</a></li>
-                    <li><a href="#">{!! __('footer.Установки для осушения воздуха в бассейнах') !!}</a></li>
-                    <li><a href="#">{!! __('footer.Оборудование для кухни. Фильтрация и очистка воздуха') !!}</a></li>
-                    <li><a href="#">{!! __('footer.Гигиенические установки') !!}</a></li>
-                    <li><a href="#">{!! __('footer.Отопление') !!}</a></li>
+                @foreach ($context->regular as $category)
+                    <li>
+                        <a href='{{ route('category.show', ['locale' => session()->get('locale'), 'id' => $category->id]) }}'>
+                            {{ $category->name }}</a>
+                    </li>
+                    @endforeach
                 </ul>
             </div>
         </div>
@@ -114,6 +118,9 @@
     </button>
 
     <!-- The Modal -->
+     
+
+
     <div id="myModal" class="modal">
 
         <!-- Modal content -->
@@ -122,9 +129,12 @@
             <div class="card">
                 <p class="call-title">{!! __('footer.Мы можем вам перезвонить, если захотите!') !!}</p>
                 <p class="call-text">{!! __('footer.Введите свой номер телефона и мы с вами свяжемся.') !!}</p>
-                <form action="sendhtmlemail" method="GET">
+
+                {{-- Mail form starts --}}
+                <form action="{{ route('mail.post.callback') }}" method="POST">
+                    @csrf
                     <input type="text" name="name" placeholder="{!! __('footer.Ваше имя и фамилия') !!}" required>
-                    <input type="text" name="number" placeholder="+ (998)" required>
+                    <input type="text" name="phone" placeholder="+998" required>
                     <button class="svg-wrapper">
                         <svg height="60" width="320" xmlns="http://www.w3.org/2000/svg">
                             <rect class="shape" height="60" width="320" />
@@ -138,6 +148,9 @@
         </div>
 
     </div>
+
+
+
 </div>
 
 <div class="footer-bottom-scroll">
