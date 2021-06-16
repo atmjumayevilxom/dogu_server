@@ -12,6 +12,11 @@ class CategoryController extends Controller
         $categories = Category::unfeatured()->get()->translate(app()->getLocale());
         return view('categories', compact('categories'));
     }
+    public function indexx()
+    {
+        $categories = Category::featured()->get()->translate(app()->getLocale());
+        return view('categories', compact('categories'));
+    }
 
     public function show(Request $request)
     {

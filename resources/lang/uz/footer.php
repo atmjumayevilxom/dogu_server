@@ -2,7 +2,7 @@
 
 return [
     'О компании' =>'Kompaniya haqida',
-    'Проекты' => 'Проекты',
+    'Проекты' => 'Proyectlar',
     'Сервис' => 'Xizmat',
     'Видео' => 'Video',
     'Оборудование' => 'Asbob-uskunalar',

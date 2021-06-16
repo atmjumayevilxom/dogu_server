@@ -57,7 +57,7 @@
                       </ul>
                   </li>
                   <li class='drop-down'>
-                      <a href='./categories'>
+                      <a href='{{ route('category.indexx', session()->get('locale')) }}'>
                       {!! __('navbar.Сетевые элементы') !!}
                           <i class="fas fa-angle-right"></i>
                       </a>
@@ -107,24 +107,32 @@
                     <div class="overlay-content">
                         <div class="footer-items" style="padding: 50px 0px">
                             <div class="item-1">
-                                <h4 class="font-00-02"><a href="./company.html">{!! __('navbar.О компании') !!}</a></h4>
-                                <h4 class="font-00-02"><a href="./categories.html">{!! __('navbar.ОБОРУДОВАНИЕ') !!}</a><i class="fa fa-angle-down"></i></h4>
+                                <h4 class="font-00-02"><a href="{{ route('company', session()->get('locale')) }}">{!! __('navbar.О Компания') !!}</a></h4>
+                                <h4 class="font-00-02"><a href="{{ route('category.index', session()->get('locale')) }}">{!! __('navbar.ОБОРУДОВАНИЕ') !!}</a><i class="fa fa-angle-down"></i></h4>
                                 <ul class="navbar">
-                                    <li><a href="./card.html">{!! __('navbar.Центральные приточно-вытяжные установки') !!}</a></li>
-                                    <li><a href="./card.html"> {!! __('navbar.Компактные установки с рекуперацией') !!}</a></li>
-                                    <li><a href="./card.html">{!! __('navbar.Установки для осушения воздуха в бассейне') !!}</a></li>
-                                    <li><a href="./card.html">{!! __('navbar.Оборудование для кухни') !!}</a></li>
-                                    <li><a href="./card.html">{!! __('navbar.Гигиенические установки') !!}</a></li>
-                                    <li><a href="./card.html"> {!! __('navbar.Воздушное отопление') !!}</a></li>
-                                    <li><a href="./card.html"> {!! __('navbar.Rooftop') !!}</a></li>
+
+
+                            
+
+
+
+                                @foreach ($context->regular as $category)
+                                
+                                    <li><a href="{{ route('category.show', ['locale' => session()->get('locale'), 'id' => $category->id]) }}">{{ $category->name }}</a></li>
+                                    @endforeach
                                 </ul>
                             </div>
                             <div class="item-1 ">
-                                <h4 class="font-00-02"><a href="./categories.html">{!! __('navbar. ') !!}Сетевые элементы</a> <i class="fa fa-angle-down"></i></h4>
+                                <h4 class="font-00-02"><a href="{{ route('category.show', ['locale' => session()->get('locale'), 'id' => $category->id]) }}">{!! __('navbar.Сетевые элементы') !!}</a> <i class="fa fa-angle-down"></i></h4>
                                 <ul class="navbar">
-                                    <li><a href="./Projects.html">{!! __('navbar.Решетки') !!}</a></li>
-                                    <li><a href="./Projects.html">{!! __('navbar.Диффузоры') !!}</a></li>
-                                    <li><a href="./Projects.html">{!! __('navbar.Клапаны') !!}</a></li>
+                                @foreach ($context->featured as $category)
+                            <li>
+                                <a href='{{ route('category.show', ['locale' => session()->get('locale'), 'id' => $category->id]) }}'>
+                                    
+                                    {{ $category->name }}
+                                </a>
+                            </li>
+                          @endforeach
                                 </ul>
                             </div>
 
@@ -137,10 +145,27 @@
                             <li class="sot_seti"><a href="https://www.facebook.com/doguuzbekistan"><i
                                         class="fab fa-facebook seti"></i></a></li>
                         </ul>
-                        <select name="lang" id="lang">
-                            <option value="ru"><a href=""><img src="./images/ru.png" alt="jpg"> RU</a></option>
-                            <option value="uz"><a href=""><img src="./images/uz.png" alt="jpg"> UZ</a></option>
-                        </select>
+                        <form action="{{ route('set.locale') }}" method="POST">
+                            @csrf
+                            <select name="locale" id="lang" onchange="this.form.submit()">
+                                <option value="ru"
+                                    @if (session()->get('locale') === "ru")
+                                        selected="selected"
+                                    @endif
+                                >
+                                    <img src="{{ asset('./images/ru.png') }}" alt="png">
+                                    RU
+                                </option>
+                                <option value="uz"
+                                    @if (session()->get('locale') === "uz")
+                                        selected="selected"
+                                    @endif
+                                >
+                                    <img src="{{ asset('./images/uz.png') }}" alt="png">
+                                    UZ
+                                </option>
+                            </select>
+                        </form>
                     </div>
 
                 </div>

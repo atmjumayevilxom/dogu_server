@@ -21,4 +21,8 @@ class Category extends Model
     public function scopeUnfeatured($query) {
         return $query->where('featured', false);
     }
+
+    public function scopeFeatured($query) {
+        return $query->where('featured', true);
+    }
 }

@@ -23,6 +23,7 @@ Route::prefix('{locale}')->middleware('set.locale')->group(function () {
 
     Route::prefix('/categories')->name('category.')->group(function () {
         Route::get('', [CategoryController::class, 'index'])->name('index');
+        Route::get('/featured', [CategoryController::class, 'indexx'])->name('indexx');
         Route::get('/{id}', [CategoryController::class, 'show'])->name('show');
     });
 

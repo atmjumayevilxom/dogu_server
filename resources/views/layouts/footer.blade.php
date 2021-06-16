@@ -65,14 +65,12 @@
     <div class="container">
         <div class="footer-items" style="padding: 50px 0px">
             <div class="item-1">
-                <h4 class="font-00-02">{!! __('footer.О компании ') !!} <i class="fa fa-angle-down"></i></h4>
+                <h4 class="font-00-02">{!! __('footer.О компании') !!} <i class="fa fa-angle-down"></i></h4>
                 <ul class="navbar">
-                    <li><a href="#">{!! __('footer.Центральные приточно-вытяжные установки') !!}</a></li>
-                    <li><a href="#">{!! __('footer.Компактные установки с рекуперацией') !!}</a></li>
-                    <li><a href="#">{!! __('footer.Установки для осушения воздуха в бассейнах') !!}</a></li>
-                    <li><a href="#">{!! __('footer.Оборудование для кухни. Фильтрация и очистка воздуха') !!}</a></li>
-                    <li><a href="#">{!! __('footer.Гигиенические установки') !!}</a></li>
-                    <li><a href="#">{!! __('footer.Отопление') !!}</a></li>
+                <li><a href="{{ route('company', session()->get('locale')) }}">{!! __('footer.О компании') !!}</a></li>
+                    <li><a href="{{ route('project', session()->get('locale')) }}">{!! __('footer.Проекты') !!}</a></li>
+                    <li><a href="{{ route('service', session()->get('locale')) }}">{!! __('footer.Сервис') !!}</a></li>
+                    <li><a href="{{ route('video', session()->get('locale')) }}">{!! __('footer.Видео') !!}</a></li>
                 </ul>
             </div>
             <div class="item-1 ">
