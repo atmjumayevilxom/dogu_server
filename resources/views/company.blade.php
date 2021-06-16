@@ -49,7 +49,7 @@ DOGU Турция, г. Измир www.doguhvac.com') !!}</p>
                 </div>
                 <div class="company__file">
                 <figure>
-                    <a href="./images/DOGU-COMPANY-FOUR-SEASONS-_рус_финал.pdf" target="_blank"><img width="400" height="325" src="{{asset('./images/dogu-com.jpg')}}" alt="jpg"><i class="fas fa-link"></i></a>
+                    <a href="{{asset('./images/DOGU-COMPANY-FOUR-SEASONS-_рус_финал.pdf')}}" target="_blank"><img width="400" height="325" src="{{asset('./images/dogu-com.jpg')}}" alt="jpg"><i class="fas fa-link"></i></a>
                     <!--                        <figcaption class="presentation">Презентация продукции, pdf, 6.5 Mb</figcaption>-->
                 </figure>
             </div>
