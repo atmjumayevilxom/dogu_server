@@ -14,7 +14,7 @@
             <span herf="#">{{$category->name}}</span>
         </div>
     </a>
-    @endforeach
+    @endforeach 
 </div>
 
 @stop
