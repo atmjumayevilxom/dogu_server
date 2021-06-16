@@ -17,9 +17,9 @@ Route::get('/', [LocaleController::class, 'redirect']);
 Route::prefix('{locale}')->middleware('set.locale')->group(function () {
     Route::get('/', [StaticController::class, 'home'])->name('home');
     Route::get('/company', [StaticController::class, 'company'])->name('company');
-    Route::get('/project', [StaticController::class, 'project']);
-    Route::get('/service', [StaticController::class, 'service']);
-    Route::get('/video', [StaticController::class, 'video']);
+    Route::get('/project', [StaticController::class, 'project'])->name('project');
+    Route::get('/service', [StaticController::class, 'service'])->name('service');
+    Route::get('/video', [StaticController::class, 'video'])->name('video');
 
     Route::prefix('/categories')->name('category.')->group(function () {
         Route::get('', [CategoryController::class, 'index'])->name('index');
