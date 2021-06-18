@@ -57,7 +57,7 @@
                       </ul>
                   </li>
                   <li class='drop-down'>
-                      <a href='{{ route('category.indexx', session()->get('locale')) }}'>
+                      <a href='{{ route('category.index_featured', session()->get('locale')) }}'>
                           {!! __('navbar.Сетевые элементы') !!}
                           <i class="fas fa-angle-right"></i>
                       </a>
@@ -120,7 +120,7 @@
                               </ul> 
                           </div>
                           <div class="item-1">
-                              <h4 class="font-00-02"><a href='{{ route('category.indexx', session()->get('locale')) }}'>{!! __('navbar.Сетевые элементы') !!}</a> <i class="fa fa-angle-down"></i></h4>
+                              <h4 class="font-00-02"><a href='{{ route('category.index_featured', session()->get('locale')) }}'>{!! __('navbar.Сетевые элементы') !!}</a> <i class="fa fa-angle-down"></i></h4>
                               <ul class="navbar" value="2">
                                   @foreach ($context->featured as $category)
                                   <li>

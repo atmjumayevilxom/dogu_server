@@ -5,7 +5,8 @@
                 <img src="{{ asset('images/android-chrome-192x192.png') }}">
             </div>
             <div class="col-sm-4">
-                <p class="title">{!! __('footer.О компании') !!}</p>
+            <a class="title" href="{{ route('company', session()->get('locale')) }}" >
+                          {!! __('footer.О компании') !!}</a>
                 <ul class="navbar">
                     <li><a href="{{ route('company', session()->get('locale')) }}">{!! __('footer.О компании') !!}</a></li>
                     <li><a href="{{ route('project', session()->get('locale')) }}">{!! __('footer.Проекты') !!}</a></li>
@@ -14,7 +15,8 @@
                 </ul>
             </div>
             <div class="col-sm-4">
-                <p class="title">{!! __('footer.Оборудование') !!}</p>
+                <a class="title footer-title" href="{{ route('category.index', session()->get('locale')) }}">
+                          {!! __('footer.Оборудование') !!}</a>
                 <ul class="navbar">
                     @foreach ($context->regular as $category)
                     <li>
@@ -25,7 +27,7 @@
                 </ul>
             </div>
             <div class="col-sm-4">
-                <p class="title">{!! __('footer.Сетевые элементы') !!}</p>
+            <a class="title" href="{{ route('category.index_featured', session()->get('locale')) }}">{!! __('footer.Сетевые элементы') !!}</a>
                 <ul class="navbar">
                     @foreach ($context->featured as $category)
                     <li>
